@@ -86,6 +86,17 @@
       </div>
 
       <div class="theory-card">
+        <span class="stamp c-sky">🧭 Ligging</span>
+        <h3>Absolute en relatieve ligging</h3>
+        <p>Om een plaats correct te situeren, gebruik je twee soorten ligging:</p>
+        <ul>
+          <li><strong>Absolute ligging:</strong> de exacte plaats op aarde, ongeacht andere plaatsen. Bijvoorbeeld: het halfrond (noordelijk/zuidelijk, westelijk/oostelijk) of de coördinaten (breedtegraad en lengtegraad).</li>
+          <li><strong>Relatieve ligging:</strong> de plaats van iets ten opzichte van iets anders. Bijvoorbeeld: "ten oosten van Afrika" of "tussen twee landen".</li>
+        </ul>
+        <p>Je gebruikt deze begrippen op verschillende <strong>schaalniveaus</strong>: van een klein gebied tot een heel continent of de hele wereld.</p>
+      </div>
+
+      <div class="theory-card">
         <span class="stamp c-leaf">👥 Bevolkingsspreiding</span>
         <h3>De aarde biedt kansen</h3>
         <p>De bevolking is onregelmatig over de aarde verspreid. De <strong>bevolkingsdichtheid</strong> geeft weer hoeveel mensen er gemiddeld per km² wonen. De mens woont waar de aarde kansen biedt om te leven, voedsel te produceren en een inkomen te verwerven. Alle zes fysischgeografische landschapsvormende lagen hierboven spelen daarin een rol:</p>
@@ -230,6 +241,26 @@
         <div id="exam-open3"></div>
       </div>
 
+      <div class="exam-card">
+        <span class="exam-type">Vaktaal</span>
+        <div id="exam-vak1"></div>
+      </div>
+
+      <div class="exam-card">
+        <span class="exam-type">Vaktaal</span>
+        <div id="exam-vak2"></div>
+      </div>
+
+      <div class="exam-card">
+        <span class="exam-type">Vaktaal</span>
+        <div id="exam-vak3"></div>
+      </div>
+
+      <div class="exam-card">
+        <span class="exam-type">Vaktaal</span>
+        <div id="exam-vak4"></div>
+      </div>
+
     </div>
   </section>
 
@@ -240,6 +271,7 @@
   <div class="visit-counter">
     <img src="https://visitor-badge.laobi.icu/badge?page_id=hast-hasselt.missie-aarde-vanuit-de-ruimte&left_text=Bezoekers" alt="Aantal bezoeken van deze site">
   </div>
+  <p class="curriculum-note">LPD 2, LPD 19 · MD 09.01, MD 09.07, MD 13.03</p>
 </footer>
 
 <script src="assets/js/flashcards.js"></script>
@@ -259,6 +291,8 @@ buildFlashcards(document.getElementById("flashcards-1"), {
     { front: "Noem de zes fysischgeografische landschapsvormende lagen.", back: "Natuurlijke vegetatie, klimaat, water, reliëf, bodem en ondergrond." },
     { front: "Wat is het verschil tussen bodem en ondergrond?", back: "De bodem is het bovenste losse gedeelte van de aarde waarin plantengroei en gesteente elkaar beïnvloeden. De ondergrond is het gesteente dat zich daaronder bevindt." },
     { front: "Wat is klimaat, precies?", back: "De gemiddelde temperatuur- en neerslagkenmerken van de lucht over een periode van 30 jaar." },
+    { front: "Wat is absolute ligging?", back: "De exacte plaats op aarde, ongeacht andere plaatsen. Bijvoorbeeld het halfrond of de coördinaten." },
+    { front: "Wat is relatieve ligging?", back: "De plaats van iets ten opzichte van iets anders. Bijvoorbeeld 'ten oosten van Afrika' of 'tussen twee landen'." },
     { front: "Welke kleur wijst op plantengroei op een satellietbeeld?", back: "Groen." },
     { front: "Welke kleur wijst op woestijn op een satellietbeeld?", back: "Geelbruin." },
     { front: "Waaraan herken je bebouwing/steden op een satellietbeeld?", back: "Aan de grijze kleur en de vele rechte vormen (straten, kanalen)." },
@@ -283,6 +317,8 @@ buildQuiz(document.getElementById("quiz-1"), {
     { q: "Hoeveel fysischgeografische landschapsvormende lagen zijn er?", options: ["3", "4", "5", "6"], correct: 3, explain: "Natuurlijke vegetatie, klimaat, water, reliëf, bodem en ondergrond." },
     { q: "Welke van deze lagen is sociaalgeografisch (menselijk) in plaats van fysischgeografisch (natuurlijk)?", options: ["Reliëf", "Landbouw", "Klimaat", "Ondergrond"], correct: 1, explain: "Landbouw is door de mens gemaakt, en dat maakt het een sociaalgeografische laag." },
     { q: "Wat is het verschil tussen bodem en ondergrond?", options: ["Er is geen verschil", "De bodem is het bovenste losse gedeelte; de ondergrond is het gesteente eronder", "De ondergrond ligt boven de bodem", "Bodem gaat over water, ondergrond over reliëf"], correct: 1 },
+    { q: "'Australië ligt op het zuidelijk halfrond' is een voorbeeld van...", options: ["relatieve ligging", "absolute ligging", "een demografische indicator", "een sociaalgeografische laag"], correct: 1, explain: "Het halfrond is een vaste, exacte plaats op aarde, ongeacht andere plaatsen." },
+    { q: "'De Indische Oceaan ligt ten oosten van Afrika' is een voorbeeld van...", options: ["relatieve ligging", "absolute ligging", "een fysischgeografische laag", "een werelddeel"], correct: 0, explain: "Hier situeer je iets ten opzichte van iets anders." },
     { q: "Welke kleur wijst op woestijn op een satellietbeeld?", options: ["Groen", "Blauw", "Geelbruin", "Grijs"], correct: 2 },
     { q: "Waaraan herken je landbouwpercelen op een satellietbeeld?", options: ["Aan onregelmatige, grillige vormen", "Aan regelmatige vormen zoals vierkanten en cirkels", "Aan een donkere kleur", "Aan rechte lijnen die kanalen voorstellen"], correct: 1 },
     { q: "Wat geeft de bevolkingsdichtheid weer?", options: ["Het totale aantal inwoners van een land", "Hoeveel mensen er gemiddeld per km² wonen", "Hoeveel procent van een land bebouwd is", "De groeisnelheid van de bevolking"], correct: 1 },
@@ -299,7 +335,8 @@ buildMapExercise(document.getElementById("map-globes1"), {
   items: [
     { q: "Welk cijfer stelt Australië voor?", options: ["1", "2", "3"], correct: 0 },
     { q: "Welk cijfer stelt de Indische Oceaan voor?", options: ["1", "2", "3"], correct: 1 },
-    { q: "Welk cijfer stelt Antarctica voor?", options: ["1", "2", "3"], correct: 2 }
+    { q: "Welk cijfer stelt Antarctica voor?", options: ["1", "2", "3"], correct: 2 },
+    { q: "Op welk halfrond ligt Australië volledig?", options: ["Het noordelijk halfrond", "Het zuidelijk halfrond"], correct: 1, explain: "Dit is absolute ligging." }
   ]
 });
 
@@ -343,7 +380,9 @@ buildMapExercise(document.getElementById("map-africa"), {
   alt: "Satellietbeeld van Afrika vanuit de ruimte",
   items: [
     { q: "Welk continent zie je op dit satellietbeeld?", options: ["Zuid-Amerika", "Afrika", "Azië"], correct: 1 },
+    { q: "De evenaar loopt dwars door Afrika. Op welk(e) halfrond(en) ligt Afrika daardoor?", options: ["Enkel het noordelijk halfrond", "Enkel het zuidelijk halfrond", "Zowel het noordelijk als het zuidelijk halfrond"], correct: 2, explain: "Dit is absolute ligging: de vaste plaats van Afrika op aarde." },
     { q: "De Indische Oceaan ligt ten opzichte van Afrika...", options: ["ten westen", "ten oosten", "ten noorden"], correct: 1 },
+    { q: "Welke oceaan ligt ten westen van Afrika?", options: ["De Grote Oceaan", "De Indische Oceaan", "De Atlantische Oceaan"], correct: 2, explain: "Dit is relatieve ligging: de plaats van de oceaan ten opzichte van Afrika." },
     { q: "De groene kleur op dit beeld stelt vooral voor:", options: ["Het tropisch regenwoud van de Amazonerivier", "Het tropisch regenwoud van de Congorivier", "De Sahara"], correct: 1 },
     { q: "De gele kleur op dit beeld stelt voor:", options: ["De Gobiwoestijn", "De Atacamawoestijn", "De Saharawoestijn"], correct: 2 }
   ]
@@ -419,6 +458,26 @@ buildOpenReveal(document.getElementById("exam-jf"), {
 buildOpenReveal(document.getElementById("exam-open3"), {
   q: "Waarom vallen de dichtstbevolkte gebieden vandaag niet meer overal samen met de vruchtbaarste landbouwstreken?",
   model: "Sinds de industriële revolutie in de 19de eeuw werden handel en transport steeds belangrijker. Daardoor groeiden vooral steden aan de kust, ook al lagen die niet altijd op de vruchtbaarste bodems. Zo raakten bevolkingsspreiding en landbouwstreken losser van elkaar."
+});
+
+buildShortAnswer(document.getElementById("exam-vak1"), {
+  q: "Welk vakwoord hoort bij deze omschrijving? \"Het gemiddeld aantal mensen dat per km² in een gebied woont.\"",
+  accepted: ["bevolkingsdichtheid"]
+});
+
+buildShortAnswer(document.getElementById("exam-vak2"), {
+  q: "Welk vakwoord hoort bij deze omschrijving? \"Een landschapslaag die door de natuur ontstaan is, zonder ingrijpen van de mens.\"",
+  accepted: ["fysischgeografisch", "fysischgeografische laag"]
+});
+
+buildShortAnswer(document.getElementById("exam-vak3"), {
+  q: "Welk vakwoord hoort bij deze omschrijving? \"Een landschapslaag die door de mens gemaakt of veranderd is.\"",
+  accepted: ["sociaalgeografisch", "sociaalgeografische laag"]
+});
+
+buildShortAnswer(document.getElementById("exam-vak4"), {
+  q: "Welk vakwoord hoort bij deze omschrijving? \"De plaats van iets ten opzichte van iets anders, bijvoorbeeld 'ten oosten van'.\"",
+  accepted: ["relatieve ligging"]
 });
 </script>
 

@@ -591,6 +591,12 @@ footer a { color: #d9d0ff; }
   height: 22px;
 }
 
+.curriculum-note {
+  font-size: 0.68rem;
+  opacity: 0.55;
+  margin-top: 10px;
+}
+
 /* ---------- Examenstijl: kort antwoord, open vraag, rangschikken ---------- */
 
 .short-answer-row {
