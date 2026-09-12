@@ -661,7 +661,10 @@ footer a { color: #d9d0ff; }
   padding: 10px 14px;
   font-size: 0.9rem;
   margin: 10px 0;
+  display: none;
 }
+
+.open-hint.show { display: block; }
 
 .ranking-list {
   list-style: none;

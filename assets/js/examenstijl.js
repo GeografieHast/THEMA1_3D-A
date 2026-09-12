@@ -49,13 +49,24 @@ function buildOpenReveal(container, config) {
   container.innerHTML = `
     ${config.image ? `<img src="${config.image}" alt="${config.alt || ""}" style="border-radius:14px;margin-bottom:16px;border:3px solid #ecebf7;max-width:100%;">` : ""}
     <div class="quiz-question">${config.q}</div>
-    ${config.hint ? `<p class="open-hint">💡 <strong>Hint:</strong> ${config.hint}</p>` : ""}
-    <textarea class="open-answer-box" rows="3" placeholder="Schrijf hier eerst zelf je antwoord (optioneel)..."></textarea>
-    <div style="margin-top:12px;">
+    <textarea class="open-answer-box" rows="3" placeholder="Schrijf hier eerst zelf je antwoord..."></textarea>
+    <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;">
+      ${config.hint ? `<button class="btn secondary open-hint-btn">Nood aan een hint?</button>` : ""}
       <button class="btn secondary open-reveal-btn">Bekijk modelantwoord</button>
     </div>
+    <div class="open-hint"></div>
     <div class="open-model-answer"></div>
   `;
+
+  if (config.hint) {
+    const hintBtn = container.querySelector(".open-hint-btn");
+    const hintBox = container.querySelector(".open-hint");
+    hintBtn.addEventListener("click", () => {
+      hintBox.classList.add("show");
+      hintBox.innerHTML = `💡 <strong>Hint:</strong> ${config.hint}`;
+      hintBtn.style.display = "none";
+    });
+  }
 
   const btn = container.querySelector(".open-reveal-btn");
   const modelBox = container.querySelector(".open-model-answer");

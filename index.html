@@ -24,6 +24,7 @@
       <a href="#quiz">🧠 Quiz</a>
       <a href="#kaartmissies">🗺️ Kaartmissies</a>
       <a href="#examenstijl">📝 Oefen zoals op de toets</a>
+      <a href="#uitdaging">🔥 Uitdaging</a>
     </div>
   </div>
 </div>
@@ -264,6 +265,37 @@
     </div>
   </section>
 
+  <!-- UITDAGING -->
+  <section class="block" id="uitdaging">
+    <div class="block-head">
+      <span class="block-icon">🔥</span>
+      <h2>Uitdaging: nieuwe voorbeelden</h2>
+      <p class="block-intro">Deze voorbeelden staan niet letterlijk in je handboek. Kan je wat je geleerd hebt toepassen op een plaats die je nog niet eerder zag?</p>
+    </div>
+
+    <div class="theory-grid">
+      <div class="exam-card">
+        <span class="exam-type">Lang antwoord, hogere moeilijkheidsgraad</span>
+        <div id="exam-uitdaging1"></div>
+      </div>
+
+      <div class="exam-card">
+        <span class="exam-type">Lang antwoord, hogere moeilijkheidsgraad</span>
+        <div id="exam-uitdaging2"></div>
+      </div>
+
+      <div class="exam-card">
+        <span class="exam-type">Vergelijken, hogere moeilijkheidsgraad</span>
+        <div id="exam-uitdaging3"></div>
+      </div>
+
+      <div class="exam-card">
+        <span class="exam-type">Onderscheid maken</span>
+        <div id="exam-uitdaging4"></div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer>
@@ -486,6 +518,30 @@ buildShortAnswer(document.getElementById("exam-vak3"), {
 buildShortAnswer(document.getElementById("exam-vak4"), {
   q: "Welk vakwoord hoort bij deze omschrijving? \"De plaats van iets ten opzichte van iets anders, bijvoorbeeld 'ten oosten van'.\"",
   accepted: ["relatieve ligging"]
+});
+
+buildOpenReveal(document.getElementById("exam-uitdaging1"), {
+  q: "Bangladesh is een van de dichtst bevolkte landen ter wereld, ook al ligt het grootste deel van het land in een laaggelegen, overstromingsgevoelige rivierdelta. Verklaar dit aan de hand van minstens twee fysischgeografische factoren.",
+  hint: "Denk aan de bodem in een rivierdelta, en aan het water en klimaat die er beschikbaar zijn voor landbouw.",
+  model: "Een rivierdelta zoals in Bangladesh heeft een zeer vruchtbare bodem, doordat de rivier voortdurend sediment (slib) aanvoert. Er is ook overvloedig water beschikbaar voor irrigatie en rijstteelt, en het klimaat is er warm genoeg voor meerdere oogsten per jaar. Die combinatie van vruchtbare bodem, veel water en een gunstig klimaat biedt enorme kansen voor landbouw en dus voor een hoge bevolkingsdichtheid, ook al brengt de lage ligging overstromingsrisico met zich mee."
+});
+
+buildOpenReveal(document.getElementById("exam-uitdaging2"), {
+  q: "De Sahelzone, net ten zuiden van de Sahara, is een van de dunst bevolkte gebieden ter wereld. Welke fysischgeografische factoren zijn hier waarschijnlijk de oorzaak van?",
+  hint: "Kijk naar het klimaat van een gebied vlak naast een woestijn, en wat dat betekent voor bodem en plantengroei.",
+  model: "De Sahelzone heeft een droog, warm klimaat met weinig en onregelmatige neerslag, net onder de Sahara. Daardoor is de bodem er arm en weinig vruchtbaar, en is de natuurlijke plantengroei schaars. Die combinatie van een droog klimaat en een onvruchtbare bodem biedt weinig kansen voor landbouw, waardoor het gebied dunbevolkt is."
+});
+
+buildOpenReveal(document.getElementById("exam-uitdaging3"), {
+  q: "Vergelijk Nederland (bijna 400 inwoners per km²) met Mongolië (minder dan 2 inwoners per km²). Welke fysischgeografische factoren verklaren dit enorme verschil?",
+  hint: "Denk aan reliëf, bodem en klimaat in beide landen.",
+  model: "Nederland heeft een vlak reliëf, een vruchtbare bodem (onder andere poldergrond) en een gematigd, vochtig klimaat dat gunstig is voor landbouw, wat veel kansen biedt om te wonen en te werken. Mongolië heeft een droog, continentaal klimaat met extreme temperaturen, en een groot deel van het land bestaat uit steppe en woestijn met een minder vruchtbare bodem. Die combinatie biedt veel minder kansen voor landbouw en bewoning, waardoor het land dunbevolkt is."
+});
+
+buildOpenReveal(document.getElementById("exam-uitdaging4"), {
+  q: "Een rivier is een fysischgeografisch gegeven. Maar wat als die rivier via een dam wordt omgeleid om water naar landbouwvelden te sturen? Is dat dan nog steeds fysischgeografisch, of intussen sociaalgeografisch? Verklaar je antwoord.",
+  hint: "Kijk niet naar wat het is (water), maar naar hoe het zo geworden is.",
+  model: "Het water zelf, en de rivier zoals ze van nature ontstaan is, blijft fysischgeografisch. Maar het omleiden van de rivier via een dam is een ingreep van de mens, dus die aangepaste waterloop is op dat punt sociaalgeografisch. Je moet dus telkens nagaan of iets van nature zo is, of dat de mens eraan gesleuteld heeft."
 });
 </script>
 
