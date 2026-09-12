@@ -27,6 +27,14 @@ assets/img/*.png         → afbeeldingen, geknipt uit het handboek
                             (zonder de antwoorden erop)
 ```
 
+## Bezoekersteller
+
+Onderaan de site staat een teller die automatisch bijhoudt hoe vaak de
+pagina bezocht is (via de gratis dienst visitor-badge.laobi.icu, geen
+account nodig). Zodra de site op GitHub Pages live staat, telt hij vanzelf
+mee. Wil je ooit opnieuw beginnen tellen vanaf 0? Verander dan de waarde
+achter `page_id=` in `index.html` (voettekst) naar een nieuwe, unieke tekst.
+
 ## Zelf aanpassen
 
 - Vragen/flashcards aanpassen: open `index.html`, zoek de `<script>` onderaan

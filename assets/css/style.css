@@ -580,6 +580,17 @@ footer {
 
 footer a { color: #d9d0ff; }
 
+.visit-counter {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+}
+
+.visit-counter img {
+  border-radius: 8px;
+  height: 22px;
+}
+
 /* ---------- Examenstijl: kort antwoord, open vraag, rangschikken ---------- */
 
 .short-answer-row {
