@@ -23,6 +23,7 @@
       <a href="#flashcards">🃏 Geheugenkaarten</a>
       <a href="#quiz">🧠 Quiz</a>
       <a href="#kaartmissies">🗺️ Kaartmissies</a>
+      <a href="#examenstijl">📝 Oefen zoals op de toets</a>
     </div>
   </div>
 </div>
@@ -129,22 +130,25 @@
     <div class="block-head">
       <span class="block-icon">🗺️</span>
       <h2>Kaartmissies</h2>
-      <p class="block-intro">Echte satellietbeelden en kaarten uit je handboek. Gebruik je atlas waar nodig.</p>
+      <p class="block-intro">Echte satellietbeelden en kaarten uit je handboek. Je mag je atlas erbij nemen wanneer je twijfelt.</p>
     </div>
 
     <div class="theory-grid">
       <div class="map-mission">
         <div class="map-mission-title"><span class="icon">🌏</span> Missie 1: continenten en oceanen (1)</div>
+        <div class="atlas-tip"><span class="icon">📚</span><span><strong>Atlas-tip:</strong> gebruik de kaart van de continenten en oceanen in je atlas als je twijfelt.</span></div>
         <div class="map-exercise" id="map-globes1"></div>
       </div>
 
       <div class="map-mission">
         <div class="map-mission-title"><span class="icon">🌎</span> Missie 2: Noord- en Zuid-Amerika</div>
+        <div class="atlas-tip"><span class="icon">📚</span><span><strong>Atlas-tip:</strong> gebruik de kaart van de continenten en oceanen in je atlas als je twijfelt.</span></div>
         <div class="map-exercise" id="map-globes2"></div>
       </div>
 
       <div class="map-mission">
         <div class="map-mission-title"><span class="icon">🌃</span> Missie 3: verlichte steden 's nachts</div>
+        <div class="atlas-tip"><span class="icon">📚</span><span><strong>Atlas-tip:</strong> zoek de steden op met de kaart van Azië in je atlas.</span></div>
         <div class="map-exercise" id="map-nightlights"></div>
       </div>
 
@@ -155,6 +159,7 @@
 
       <div class="map-mission">
         <div class="map-mission-title"><span class="icon">🦘</span> Missie 5: klimaat &amp; bevolking in Australië</div>
+        <div class="atlas-tip"><span class="icon">📚</span><span><strong>Atlas-tip:</strong> leg de klimaatkaart van Australië naast de wereldkaart van de bevolkingsdichtheid in je atlas om het verband te zien.</span></div>
         <div class="two-col">
           <div class="map-exercise" id="map-australia1"></div>
           <div class="map-exercise" id="map-australia2"></div>
@@ -171,6 +176,57 @@
     </div>
   </section>
 
+  <!-- EXAMENSTIJL -->
+  <section class="block" id="examenstijl">
+    <div class="block-head">
+      <span class="block-icon">📝</span>
+      <h2>Oefen zoals op de toets</h2>
+      <p class="block-intro">Bij een echte overhoring krijg je niet enkel meerkeuzevragen. Oefen hier ook met korte antwoorden, open vragen, juist/fout met verklaring, en rangschikken, net zoals op de toets.</p>
+    </div>
+
+    <div class="theory-grid">
+
+      <div class="exam-card">
+        <span class="exam-type">Kort antwoord</span>
+        <div class="atlas-tip"><span class="icon">📚</span><span><strong>Atlas-tip:</strong> twijfel je, zoek het op in je atlas.</span></div>
+        <div id="exam-kort1"></div>
+      </div>
+
+      <div class="exam-card">
+        <span class="exam-type">Kort antwoord</span>
+        <div class="atlas-tip"><span class="icon">📚</span><span><strong>Atlas-tip:</strong> twijfel je, zoek het op in je atlas.</span></div>
+        <div id="exam-kort2"></div>
+      </div>
+
+      <div class="exam-card">
+        <span class="exam-type">Woorden/plaatsen schikken</span>
+        <div class="atlas-tip"><span class="icon">📚</span><span><strong>Atlas-tip:</strong> je kan je antwoord controleren met de themakaart van de bevolkingsdichtheid in je atlas.</span></div>
+        <div id="exam-ranking"></div>
+      </div>
+
+      <div class="exam-card">
+        <span class="exam-type">Lang antwoord</span>
+        <div id="exam-open1"></div>
+      </div>
+
+      <div class="exam-card">
+        <span class="exam-type">Lang antwoord</span>
+        <div id="exam-open2"></div>
+      </div>
+
+      <div class="exam-card">
+        <span class="exam-type">Juist of fout, verklaar je keuze</span>
+        <div id="exam-jf"></div>
+      </div>
+
+      <div class="exam-card">
+        <span class="exam-type">Lang antwoord</span>
+        <div id="exam-open3"></div>
+      </div>
+
+    </div>
+  </section>
+
 </main>
 
 <footer>
@@ -180,6 +236,7 @@
 <script src="assets/js/flashcards.js"></script>
 <script src="assets/js/quiz.js"></script>
 <script src="assets/js/map-exercise.js"></script>
+<script src="assets/js/examenstijl.js"></script>
 <script>
 buildFlashcards(document.getElementById("flashcards-1"), {
   cards: [
@@ -301,6 +358,53 @@ buildMapExercise(document.getElementById("map-australia2"), {
     { q: "Ligt punt A in een droge of natte klimaatzone?", options: ["Droge klimaatzone", "Natte klimaatzone"], correct: 0 },
     { q: "Ligt punt B in een droge of natte klimaatzone?", options: ["Droge klimaatzone", "Natte klimaatzone"], correct: 1 }
   ]
+});
+
+buildShortAnswer(document.getElementById("exam-kort1"), {
+  image: "assets/img/africa_globe.png",
+  alt: "Satellietbeeld van Afrika vanuit de ruimte",
+  q: "Op welk continent ligt het gebied op deze foto?",
+  accepted: ["Afrika"]
+});
+
+buildShortAnswer(document.getElementById("exam-kort2"), {
+  image: "assets/img/globe3_americas.png",
+  alt: "Wereldbol met Noord- en Zuid-Amerika",
+  q: "Welk continent zie je hier afgebeeld? (Let op: het is één continent, geen twee.)",
+  accepted: ["Amerika"]
+});
+
+buildRanking(document.getElementById("exam-ranking"), {
+  q: "Rangschik deze landen van dunbevolkt naar dichtbevolkt.",
+  hint: "Gebruik de pijltjes om de volgorde te wijzigen.",
+  items: [
+    { id: "ijsland", label: "IJsland (2,8 inw./km²)" },
+    { id: "rusland", label: "Rusland (9 inw./km²)" },
+    { id: "frankrijk", label: "Frankrijk (114 inw./km²)" },
+    { id: "belgie", label: "België (377 inw./km²)" },
+    { id: "bangladesh", label: "Bangladesh (1 240 inw./km²)" }
+  ],
+  order: ["ijsland", "rusland", "frankrijk", "belgie", "bangladesh"]
+});
+
+buildOpenReveal(document.getElementById("exam-open1"), {
+  q: "Leg uit hoe irrigatie ervoor zorgt dat een droog gebied als de Nijlvallei toch dichtbevolkt kan zijn.",
+  model: "Irrigatietechnieken voeren water aan naar gebieden waar van nature weinig neerslag valt. Daardoor kan er ondanks het droge klimaat toch landbouw bedreven worden. Dat zorgt voor voedselproductie en een inkomen, waardoor het gebied dichtbevolkt kan raken ook al biedt het klimaat op zich weinig kansen."
+});
+
+buildOpenReveal(document.getElementById("exam-open2"), {
+  q: "Waarom zijn gebieden zoals de Andes, Burundi en Rwanda dichtbevolkt, terwijl hoogte over het algemeen net een rem zet op bewoning?",
+  model: "In warme klimaatzones zijn de temperaturen op grote hoogte aangenamer en koeler dan in de hete, laaggelegen gebieden. Daardoor trekken die hooggelegen gebieden juist bevolking aan, ook al is reliëf normaal een hindernis voor bewoning."
+});
+
+buildOpenReveal(document.getElementById("exam-jf"), {
+  q: "Juist of fout, en verklaar je keuze: \"Elk warm gebied met veel neerslag is dichtbevolkt.\"",
+  model: "Fout. Warme gebieden met heel veel neerslag, zoals het Amazone- en Congobekken, zijn net dunbevolkt. De dichte, weelderige plantengroei die daar ontstaat door de vele neerslag maakt menselijke activiteiten juist moeilijk."
+});
+
+buildOpenReveal(document.getElementById("exam-open3"), {
+  q: "Waarom vallen de dichtstbevolkte gebieden vandaag niet meer overal samen met de vruchtbaarste landbouwstreken?",
+  model: "Sinds de industriële revolutie in de 19de eeuw werden handel en transport steeds belangrijker. Daardoor groeiden vooral steden aan de kust, ook al lagen die niet altijd op de vruchtbaarste bodems. Zo raakten bevolkingsspreiding en landbouwstreken losser van elkaar."
 });
 </script>
 

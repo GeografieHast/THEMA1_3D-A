@@ -580,6 +580,139 @@ footer {
 
 footer a { color: #d9d0ff; }
 
+/* ---------- Examenstijl: kort antwoord, open vraag, rangschikken ---------- */
+
+.short-answer-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.short-answer-input {
+  flex: 1;
+  min-width: 180px;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  border: 3px solid #ecebf7;
+  background: #fdfcfa;
+  color: var(--ink);
+}
+
+.short-answer-input:focus {
+  outline: none;
+  border-color: var(--grape);
+}
+
+.open-answer-box {
+  width: 100%;
+  font-family: inherit;
+  font-size: 0.98rem;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  border: 3px solid #ecebf7;
+  background: #fdfcfa;
+  color: var(--ink);
+  resize: vertical;
+  margin-top: 4px;
+}
+
+.open-answer-box:focus {
+  outline: none;
+  border-color: var(--grape);
+}
+
+.open-model-answer {
+  margin-top: 14px;
+  padding: 16px 18px;
+  border-radius: var(--radius-sm);
+  background: #f1ecff;
+  color: var(--ink);
+  font-size: 0.98rem;
+  line-height: 1.55;
+  display: none;
+}
+
+.open-model-answer.show { display: block; }
+
+.ranking-list {
+  list-style: none;
+  margin: 14px 0 18px;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.ranking-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fdfcfa;
+  border: 3px solid #ecebf7;
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-weight: bold;
+}
+
+.ranking-controls { display: flex; gap: 6px; }
+
+.ranking-btn {
+  font-family: inherit;
+  font-size: 1.05rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+  background: var(--sky);
+  color: #fff;
+}
+
+.ranking-btn:hover { background: var(--sky-dk); }
+.ranking-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+
+/* ---------- Examenoefening kaarten ---------- */
+
+.exam-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 26px;
+}
+
+.exam-type {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: none;
+  color: #fff;
+  background: var(--grape);
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+/* ---------- Atlastip ---------- */
+
+.atlas-tip {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: #fff7e0;
+  border: 2px dashed var(--sun-dk);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  font-size: 0.9rem;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+
+.atlas-tip .icon { font-size: 1.2rem; line-height: 1; }
+.atlas-tip strong { color: var(--sun-dk); }
+
 /* ---------- Toegankelijkheid ---------- */
 
 a:focus-visible, button:focus-visible {
