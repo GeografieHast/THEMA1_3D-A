@@ -654,6 +654,15 @@ footer a { color: #d9d0ff; }
 
 .open-model-answer.show { display: block; }
 
+.open-hint {
+  background: #fff7e0;
+  border-left: 4px solid var(--sun-dk);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  margin: 10px 0;
+}
+
 .ranking-list {
   list-style: none;
   margin: 14px 0 18px;

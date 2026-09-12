@@ -93,7 +93,7 @@
           <li><strong>Absolute ligging:</strong> de exacte plaats op aarde, ongeacht andere plaatsen. Bijvoorbeeld: het halfrond (noordelijk/zuidelijk, westelijk/oostelijk) of de coördinaten (breedtegraad en lengtegraad).</li>
           <li><strong>Relatieve ligging:</strong> de plaats van iets ten opzichte van iets anders. Bijvoorbeeld: "ten oosten van Afrika" of "tussen twee landen".</li>
         </ul>
-        <p>Je gebruikt deze begrippen op verschillende <strong>schaalniveaus</strong>: van een klein gebied tot een heel continent of de hele wereld.</p>
+        <p>Je gebruikt deze begrippen op verschillende <strong>schaalniveaus</strong>: van een klein gebied (bv. je eigen gemeente) tot een land, een continent of de hele wereld. Hetzelfde punt kan je op elk niveau situeren: Hasselt ligt bijvoorbeeld in Limburg (lokaal niveau), in België (nationaal niveau), in Europa (continentaal niveau) en op het noordelijk halfrond (mondiaal niveau).</p>
       </div>
 
       <div class="theory-card">
@@ -293,6 +293,7 @@ buildFlashcards(document.getElementById("flashcards-1"), {
     { front: "Wat is klimaat, precies?", back: "De gemiddelde temperatuur- en neerslagkenmerken van de lucht over een periode van 30 jaar." },
     { front: "Wat is absolute ligging?", back: "De exacte plaats op aarde, ongeacht andere plaatsen. Bijvoorbeeld het halfrond of de coördinaten." },
     { front: "Wat is relatieve ligging?", back: "De plaats van iets ten opzichte van iets anders. Bijvoorbeeld 'ten oosten van Afrika' of 'tussen twee landen'." },
+    { front: "Noem vier schaalniveaus waarop je een plaats kan situeren, van klein naar groot.", back: "Lokaal (bv. je gemeente), nationaal (bv. je land), continentaal (bv. Europa) en mondiaal (bv. een halfrond of de hele wereld)." },
     { front: "Welke kleur wijst op plantengroei op een satellietbeeld?", back: "Groen." },
     { front: "Welke kleur wijst op woestijn op een satellietbeeld?", back: "Geelbruin." },
     { front: "Waaraan herken je bebouwing/steden op een satellietbeeld?", back: "Aan de grijze kleur en de vele rechte vormen (straten, kanalen)." },
@@ -319,6 +320,8 @@ buildQuiz(document.getElementById("quiz-1"), {
     { q: "Wat is het verschil tussen bodem en ondergrond?", options: ["Er is geen verschil", "De bodem is het bovenste losse gedeelte; de ondergrond is het gesteente eronder", "De ondergrond ligt boven de bodem", "Bodem gaat over water, ondergrond over reliëf"], correct: 1 },
     { q: "'Australië ligt op het zuidelijk halfrond' is een voorbeeld van...", options: ["relatieve ligging", "absolute ligging", "een demografische indicator", "een sociaalgeografische laag"], correct: 1, explain: "Het halfrond is een vaste, exacte plaats op aarde, ongeacht andere plaatsen." },
     { q: "'De Indische Oceaan ligt ten oosten van Afrika' is een voorbeeld van...", options: ["relatieve ligging", "absolute ligging", "een fysischgeografische laag", "een werelddeel"], correct: 0, explain: "Hier situeer je iets ten opzichte van iets anders." },
+    { q: "Op welk schaalniveau situeer je iets als je zegt 'Hasselt ligt in Limburg'?", options: ["Mondiaal niveau", "Continentaal niveau", "Lokaal niveau", "Klimaatniveau"], correct: 2, explain: "Een gemeente binnen een provincie situeren is lokaal niveau." },
+    { q: "Op welk schaalniveau situeer je iets als je zegt 'Afrika ligt op het zuidelijk en het noordelijk halfrond'?", options: ["Lokaal niveau", "Mondiaal niveau", "Gemeentelijk niveau", "Provinciaal niveau"], correct: 1, explain: "Een halfrond is een indeling van de hele aarde, dus mondiaal niveau." },
     { q: "Welke kleur wijst op woestijn op een satellietbeeld?", options: ["Groen", "Blauw", "Geelbruin", "Grijs"], correct: 2 },
     { q: "Waaraan herken je landbouwpercelen op een satellietbeeld?", options: ["Aan onregelmatige, grillige vormen", "Aan regelmatige vormen zoals vierkanten en cirkels", "Aan een donkere kleur", "Aan rechte lijnen die kanalen voorstellen"], correct: 1 },
     { q: "Wat geeft de bevolkingsdichtheid weer?", options: ["Het totale aantal inwoners van een land", "Hoeveel mensen er gemiddeld per km² wonen", "Hoeveel procent van een land bebouwd is", "De groeisnelheid van de bevolking"], correct: 1 },
@@ -410,6 +413,7 @@ buildMapExercise(document.getElementById("map-australia2"), {
 
 buildOpenReveal(document.getElementById("exam-australia-open"), {
   q: "Bekijk beide klimaatkaarten opnieuw. Waar wonen de meeste mensen, bij punt A of bij punt B, en waarom?",
+  hint: "Vergelijk eerst de neerslag bij A en B. Wat heeft een gebied nodig om aan landbouw te kunnen doen?",
   model: "Bij punt A wonen de meeste mensen. Punt A ligt in een gematigde en natte klimaatzone: de temperatuur is er aangenaam en er valt voldoende neerslag, wat gunstig is voor landbouw en dus voor bewoning. Punt B ligt in een gematigde maar droge klimaatzone. Door het gebrek aan neerslag biedt dat gebied minder kansen voor landbouw, waardoor het er dunbevolkt is."
 });
 
@@ -442,21 +446,25 @@ buildRanking(document.getElementById("exam-ranking"), {
 
 buildOpenReveal(document.getElementById("exam-open1"), {
   q: "Leg uit hoe irrigatie ervoor zorgt dat een droog gebied als de Nijlvallei toch dichtbevolkt kan zijn.",
+  hint: "Denk aan wat een gebied nodig heeft voor landbouw, en waar irrigatiewater dat tekort aanvult.",
   model: "Irrigatietechnieken voeren water aan naar gebieden waar van nature weinig neerslag valt. Daardoor kan er ondanks het droge klimaat toch landbouw bedreven worden. Dat zorgt voor voedselproductie en een inkomen, waardoor het gebied dichtbevolkt kan raken ook al biedt het klimaat op zich weinig kansen."
 });
 
 buildOpenReveal(document.getElementById("exam-open2"), {
   q: "Waarom zijn gebieden zoals de Andes, Burundi en Rwanda dichtbevolkt, terwijl hoogte over het algemeen net een rem zet op bewoning?",
+  hint: "Kijk naar het klimaat van de omliggende laaggelegen gebieden. Wat verandert er als je hoger gaat?",
   model: "In warme klimaatzones zijn de temperaturen op grote hoogte aangenamer en koeler dan in de hete, laaggelegen gebieden. Daardoor trekken die hooggelegen gebieden juist bevolking aan, ook al is reliëf normaal een hindernis voor bewoning."
 });
 
 buildOpenReveal(document.getElementById("exam-jf"), {
   q: "Juist of fout, en verklaar je keuze: \"Elk warm gebied met veel neerslag is dichtbevolkt.\"",
+  hint: "Denk aan het Amazone- en Congobekken. Wat doet heel veel neerslag met de plantengroei?",
   model: "Fout. Warme gebieden met heel veel neerslag, zoals het Amazone- en Congobekken, zijn net dunbevolkt. De dichte, weelderige plantengroei die daar ontstaat door de vele neerslag maakt menselijke activiteiten juist moeilijk."
 });
 
 buildOpenReveal(document.getElementById("exam-open3"), {
   q: "Waarom vallen de dichtstbevolkte gebieden vandaag niet meer overal samen met de vruchtbaarste landbouwstreken?",
+  hint: "Denk aan wat er sinds de 19de eeuw veranderde aan handel en transport, en waar steden daardoor groeiden.",
   model: "Sinds de industriële revolutie in de 19de eeuw werden handel en transport steeds belangrijker. Daardoor groeiden vooral steden aan de kust, ook al lagen die niet altijd op de vruchtbaarste bodems. Zo raakten bevolkingsspreiding en landbouwstreken losser van elkaar."
 });
 

@@ -49,6 +49,7 @@ function buildOpenReveal(container, config) {
   container.innerHTML = `
     ${config.image ? `<img src="${config.image}" alt="${config.alt || ""}" style="border-radius:14px;margin-bottom:16px;border:3px solid #ecebf7;max-width:100%;">` : ""}
     <div class="quiz-question">${config.q}</div>
+    ${config.hint ? `<p class="open-hint">💡 <strong>Hint:</strong> ${config.hint}</p>` : ""}
     <textarea class="open-answer-box" rows="3" placeholder="Schrijf hier eerst zelf je antwoord (optioneel)..."></textarea>
     <div style="margin-top:12px;">
       <button class="btn secondary open-reveal-btn">Bekijk modelantwoord</button>
