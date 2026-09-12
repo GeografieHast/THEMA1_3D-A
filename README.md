@@ -1,6 +1,6 @@
 # Missie: de aarde vanuit de ruimte 🚀
 
-Studiesite voor leerlingen bij **Thema 1, Hoofdstuk 1 — De aarde vanuit de ruimte**
+Studiesite voor leerlingen bij **Thema 1, Hoofdstuk 1: De aarde vanuit de ruimte**
 (Concreet 3, Pelckmans Uitgevers). Bevat theorie, flashcards, een quiz en
 kaartoefeningen op echte satellietbeelden/kaarten uit het handboek.
 

@@ -44,7 +44,7 @@ function buildMapExercise(container, config) {
           btn.classList.add("incorrect");
           buttons[item.correct].classList.add("correct");
           result.classList.add("show", "bad");
-          result.textContent = "🤔 Niet juist — het juiste antwoord is aangeduid." + (item.explain ? " " + item.explain : "");
+          result.textContent = "🤔 Niet juist, het juiste antwoord is aangeduid." + (item.explain ? " " + item.explain : "");
         }
       });
     });
