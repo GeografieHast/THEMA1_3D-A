@@ -582,13 +582,8 @@ footer a { color: #d9d0ff; }
 
 .visit-counter {
   margin-top: 14px;
-  display: flex;
-  justify-content: center;
-}
-
-.visit-counter img {
-  border-radius: 8px;
-  height: 22px;
+  font-size: 0.8rem;
+  color: #b6aee0;
 }
 
 .curriculum-note {
@@ -722,6 +717,15 @@ footer a { color: #d9d0ff; }
   padding: 4px 12px;
   border-radius: 999px;
   margin-bottom: 12px;
+}
+
+/* ---------- Opdracht-teller: klein, niet storend ---------- */
+
+.missie-counter {
+  margin-top: 12px;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  font-weight: normal;
 }
 
 /* ---------- Atlastip ---------- */

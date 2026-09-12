@@ -85,6 +85,10 @@ function buildQuiz(container, config) {
       score = 0;
       render();
     });
+
+    if (typeof renderMissieCounterLine === "function") {
+      renderMissieCounterLine(container, container.id);
+    }
   }
 
   render();

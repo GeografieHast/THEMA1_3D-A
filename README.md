@@ -18,22 +18,37 @@ kaartoefeningen op echte satellietbeelden/kaarten uit het handboek.
 ## Bestandsstructuur
 
 ```
-index.html              → de volledige site (één pagina)
-assets/css/style.css    → alle styling
-assets/js/quiz.js        → de quizmotor (meerkeuze, met score)
-assets/js/flashcards.js  → de flashcard-motor
-assets/js/map-exercise.js→ de kaartoefening-motor
-assets/img/*.png         → afbeeldingen, geknipt uit het handboek
-                            (zonder de antwoorden erop)
+index.html                 → de volledige site (één pagina)
+assets/css/style.css       → alle styling
+assets/js/counters.js      → gedeelde tellers (bezoekers + per opdracht)
+assets/js/quiz.js          → de quizmotor (meerkeuze, met score)
+assets/js/flashcards.js    → de flashcard-motor
+assets/js/map-exercise.js  → de kaartoefening-motor
+assets/js/examenstijl.js   → kort antwoord / open vraag / rangschikken
+assets/img/*.png           → afbeeldingen, geknipt uit het handboek
+                              (zonder de antwoorden erop)
 ```
 
-## Bezoekersteller
+## Bezoekersteller en opdracht-tellers
 
-Onderaan de site staat een teller die automatisch bijhoudt hoe vaak de
-pagina bezocht is (via de gratis dienst visitor-badge.laobi.icu, geen
-account nodig). Zodra de site op GitHub Pages live staat, telt hij vanzelf
-mee. Wil je ooit opnieuw beginnen tellen vanaf 0? Verander dan de waarde
-achter `page_id=` in `index.html` (voettekst) naar een nieuwe, unieke tekst.
+Onderaan de site staat een bezoekersteller, en bij elke opdracht (quiz,
+kaartmissie, kort antwoord, open vraag, rangschikken) verschijnt na het
+afronden een klein regeltje "👥 X leerlingen maakten deze opdracht al".
+Beide draaien op **Abacus** (abacus.jasoncameron.dev), een gratis telAPI
+zonder account. De vorige teller (visitor-badge.laobi.icu) is vervangen
+omdat dat soort losse "badge"-plaatjes regelmatig offline gaat en vaak
+door ad-blockers/privacy-instellingen in browsers wordt tegengehouden;
+dit is dezelfde soort gratis dienst, dus ook hier is 100% betrouwbaarheid
+niet te garanderen, maar hij faalt nu stil (de tekst verdwijnt gewoon)
+in plaats van een kapot plaatje te tonen.
+
+Let op: dit telt **afgeronde pogingen**, geen unieke leerlingen. Zonder
+inlogsysteem kan een statische site dat verschil niet zien; als iemand
+een quiz twee keer maakt, telt dat twee keer mee.
+
+Wil je alle tellers ooit resetten naar 0? Verander dan de waarde van
+`MISSIE_NAMESPACE` bovenaan `assets/js/counters.js` naar een nieuwe,
+unieke tekst (bv. voeg er het huidige schooljaar aan toe).
 
 ## Zelf aanpassen
 

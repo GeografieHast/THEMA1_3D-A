@@ -14,6 +14,8 @@ function buildMapExercise(container, config) {
   `;
 
   const list = container.querySelector(".map-items");
+  let answered = 0;
+  let doneCounted = false;
 
   config.items.forEach((item, idx) => {
     const wrap = document.createElement("div");
@@ -45,6 +47,14 @@ function buildMapExercise(container, config) {
           buttons[item.correct].classList.add("correct");
           result.classList.add("show", "bad");
           result.textContent = "🤔 Niet juist, het juiste antwoord is aangeduid." + (item.explain ? " " + item.explain : "");
+        }
+
+        answered++;
+        if (answered === config.items.length && !doneCounted) {
+          doneCounted = true;
+          if (typeof renderMissieCounterLine === "function") {
+            renderMissieCounterLine(container, container.id);
+          }
         }
       });
     });
