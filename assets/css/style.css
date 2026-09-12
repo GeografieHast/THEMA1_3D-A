@@ -1,0 +1,592 @@
+/* ==========================================================================
+   MISSIE: DE AARDE VANUIT DE RUIMTE
+   Speels ruimtemissie-thema: felle kleuren, stickers, badges, een raket
+   die vordert doorheen de quiz. Bewust heel anders dan een "net" dashboard.
+   Lettertype: Verdana overal (dyslexievriendelijk).
+   ========================================================================== */
+
+:root {
+  --deep2:  #1a0f38;
+
+  --coral:  #ff6b6b;
+  --coral-dk:#e64545;
+  --sun:    #ffd93d;
+  --sun-dk: #e8b800;
+  --mint:   #35d0ba;
+  --mint-dk:#1ea28f;
+  --grape:  #8c6fee;
+  --grape-dk:#6b4fd1;
+  --sky:    #4fb7e8;
+  --sky-dk: #2b8fc2;
+  --leaf:   #6fcf5c;
+  --leaf-dk:#469e37;
+
+  --paper:  #fffaf0;
+  --card:   #ffffff;
+  --ink:    #24223a;
+  --ink-soft: #635f7a;
+
+  --good:   #1ea28f;
+  --bad:    #e64545;
+
+  --radius: 22px;
+  --radius-sm: 14px;
+  --shadow: 0 12px 0 rgba(36,34,58,0.12), 0 16px 30px rgba(36,34,58,0.10);
+  --shadow-sm: 0 6px 0 rgba(36,34,58,0.10), 0 8px 18px rgba(36,34,58,0.08);
+
+  --maxw: 900px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+img { max-width: 100%; display: block; }
+a { color: var(--sky-dk); }
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------- HERO: startraket ---------- */
+
+.hero {
+  position: relative;
+  background: linear-gradient(180deg, var(--grape) 0%, var(--sky) 55%, var(--mint) 100%);
+  overflow: hidden;
+  padding: 26px 20px 64px;
+}
+
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+}
+
+.hero::before { width: 90px; height: 90px; top: 12%; left: 8%; opacity: .35; }
+.hero::after  { width: 50px; height: 50px; top: 55%; left: 88%; opacity: .3; }
+
+.hero-stars {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(2px 2px at 10% 20%, #fff 100%, transparent 0),
+    radial-gradient(2px 2px at 22% 65%, #fff 100%, transparent 0),
+    radial-gradient(3px 3px at 35% 30%, #fff 90%, transparent 0),
+    radial-gradient(2px 2px at 50% 75%, #fff 100%, transparent 0),
+    radial-gradient(2px 2px at 65% 18%, #fff 90%, transparent 0),
+    radial-gradient(3px 3px at 78% 55%, #fff 100%, transparent 0),
+    radial-gradient(2px 2px at 90% 30%, #fff 90%, transparent 0),
+    radial-gradient(2px 2px at 5% 85%, #fff 100%, transparent 0);
+  opacity: 0.8;
+}
+
+.hero-inner {
+  position: relative;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.badge-pill {
+  display: inline-block;
+  background: rgba(255,255,255,0.9);
+  color: var(--grape-dk);
+  font-weight: bold;
+  font-size: 0.85rem;
+  padding: 6px 16px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+  transform: rotate(-2deg);
+  box-shadow: var(--shadow-sm);
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 6vw, 3.1rem);
+  color: #fff;
+  margin: 0 0 14px;
+  text-shadow: 0 4px 0 rgba(0,0,0,0.12);
+  line-height: 1.1;
+}
+
+.hero .rocket {
+  display: inline-block;
+  font-size: 1em;
+  animation: floaty 2.6s ease-in-out infinite;
+}
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(-4deg); }
+}
+
+.hero p {
+  color: #fff;
+  font-size: 1.1rem;
+  max-width: 60ch;
+  margin: 0 auto 28px;
+  opacity: 0.96;
+}
+
+.hero-cta {
+  display: inline-flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ---------- Knoppen: chunky & bouncy ---------- */
+
+.btn {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 999px;
+  padding: 13px 26px;
+  cursor: pointer;
+  background: var(--coral);
+  color: #fff;
+  box-shadow: 0 6px 0 var(--coral-dk);
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.btn:hover { filter: brightness(1.05); }
+.btn:active { transform: translateY(4px); box-shadow: 0 2px 0 var(--coral-dk); }
+
+.btn.alt { background: var(--sun); color: var(--ink); box-shadow: 0 6px 0 var(--sun-dk); }
+.btn.alt:active { box-shadow: 0 2px 0 var(--sun-dk); }
+
+.btn.secondary {
+  background: #fff;
+  color: var(--grape-dk);
+  box-shadow: 0 6px 0 #d8d2f5;
+}
+.btn.secondary:active { box-shadow: 0 2px 0 #d8d2f5; }
+
+.btn:disabled { opacity: 0.4; cursor: not-allowed; box-shadow: none; transform: none; }
+
+/* ---------- Missie-navigatie chips (in-page) ---------- */
+
+.mission-nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.mission-nav a {
+  text-decoration: none;
+  background: rgba(255,255,255,0.85);
+  color: var(--ink);
+  font-weight: bold;
+  font-size: 0.85rem;
+  padding: 8px 14px;
+  border-radius: 999px;
+  box-shadow: var(--shadow-sm);
+}
+
+/* ---------- Secties ---------- */
+
+main { display: block; padding-bottom: 20px; }
+
+section.block {
+  padding: 46px 0;
+}
+
+.block-head {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.block-icon {
+  font-size: 2.2rem;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.block h2 {
+  font-size: 1.6rem;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+
+.block .block-intro {
+  color: var(--ink-soft);
+  max-width: 60ch;
+  margin: 0 auto;
+}
+
+/* ---------- Logboek / theorie kaarten ---------- */
+
+.theory-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.theory-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.theory-card h3 {
+  margin: 10px 0 10px;
+  font-size: 1.15rem;
+}
+
+.theory-card p { margin: 0 0 10px; }
+.theory-card p:last-child { margin-bottom: 0; }
+.theory-card ul { margin: 8px 0 0; padding-left: 20px; }
+.theory-card li { margin-bottom: 6px; }
+
+.stamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: bold;
+  padding: 5px 12px;
+  border-radius: 999px;
+  color: #fff;
+  transform: rotate(-2deg);
+}
+
+.stamp.c-sky    { background: var(--sky); }
+.stamp.c-leaf   { background: var(--leaf); }
+.stamp.c-grape  { background: var(--grape); }
+.stamp.c-sun    { background: var(--sun-dk); }
+.stamp.c-coral  { background: var(--coral); }
+
+figure.book-figure {
+  margin: 18px 0 0;
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 14px;
+  box-shadow: var(--shadow-sm);
+}
+
+figure.book-figure img { border-radius: 12px; }
+
+figure.book-figure figcaption {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin-top: 8px;
+  text-align: center;
+}
+
+.two-col {
+  display: grid;
+  gap: 18px;
+}
+
+@media (min-width: 700px) {
+  .two-col { grid-template-columns: 1fr 1fr; }
+}
+
+/* ---------- Flashcards: stickervibe ---------- */
+
+.flashcard-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.flashcard {
+  width: 100%;
+  max-width: 480px;
+  height: 230px;
+  perspective: 1200px;
+  cursor: pointer;
+}
+
+.flashcard-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s cubic-bezier(.4,.2,.2,1);
+  transform-style: preserve-3d;
+}
+
+.flashcard.flipped .flashcard-inner { transform: rotateY(180deg); }
+
+.flashcard-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 28px;
+  box-shadow: var(--shadow);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.flashcard-front {
+  background: linear-gradient(135deg, var(--grape) 0%, var(--sky) 100%);
+  color: #fff;
+}
+
+.flashcard-back {
+  background: #fff;
+  color: var(--ink);
+  transform: rotateY(180deg);
+  font-size: 1.02rem;
+  font-weight: normal;
+  border: 3px dashed var(--mint);
+}
+
+.flashcard-hint {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  font-weight: bold;
+}
+
+.flashcard-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.flashcard-counter {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  font-weight: bold;
+  min-width: 60px;
+  text-align: center;
+}
+
+/* ---------- Quiz: raket-voortgang ---------- */
+
+.quiz-box {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px;
+}
+
+.quiz-progress {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.quiz-progress-bar {
+  position: relative;
+  height: 14px;
+  border-radius: 999px;
+  background: #ecebf7;
+  overflow: visible;
+  margin-bottom: 26px;
+}
+
+.quiz-progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--mint), var(--sky));
+  transition: width 0.3s ease;
+  position: relative;
+}
+
+.quiz-progress-fill::after {
+  content: "🚀";
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+}
+
+.quiz-question {
+  font-size: 1.15rem;
+  font-weight: bold;
+  margin: 0 0 18px;
+}
+
+.quiz-options {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.quiz-option {
+  text-align: left;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 13px 18px;
+  border-radius: var(--radius-sm);
+  border: 3px solid #ecebf7;
+  background: #fdfcfa;
+  cursor: pointer;
+  color: var(--ink);
+  box-shadow: 0 4px 0 #ecebf7;
+  transition: transform 0.08s ease;
+}
+
+.quiz-option:hover { border-color: var(--grape); transform: translateY(-2px); }
+
+.quiz-option.correct {
+  border-color: var(--good);
+  background: #e3faf5;
+  color: var(--good);
+  font-weight: bold;
+  box-shadow: 0 4px 0 var(--good);
+}
+
+.quiz-option.incorrect {
+  border-color: var(--bad);
+  background: #fdeaea;
+  color: var(--bad);
+  font-weight: bold;
+  box-shadow: 0 4px 0 var(--bad);
+}
+
+.quiz-option:disabled { cursor: default; }
+
+.quiz-feedback {
+  margin-top: 16px;
+  padding: 14px 18px;
+  border-radius: var(--radius-sm);
+  font-size: 0.98rem;
+  font-weight: bold;
+  display: none;
+}
+
+.quiz-feedback.show { display: block; }
+.quiz-feedback.good { background: #e3faf5; color: var(--good); }
+.quiz-feedback.bad { background: #fdeaea; color: var(--bad); }
+
+.quiz-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 22px;
+}
+
+.quiz-score {
+  text-align: center;
+  padding: 20px 10px 10px;
+}
+
+.quiz-score .stars {
+  font-size: 2.4rem;
+  margin-bottom: 6px;
+}
+
+.quiz-score .big {
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: var(--grape-dk);
+}
+
+.quiz-score p { color: var(--ink-soft); font-weight: bold; }
+
+/* ---------- Kaartmissies ---------- */
+
+.map-mission {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 26px;
+  position: relative;
+}
+
+.map-mission-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 14px;
+}
+
+.map-mission-title .icon { font-size: 1.4rem; }
+
+.map-exercise img {
+  border-radius: var(--radius-sm);
+  margin-bottom: 18px;
+  border: 3px solid #ecebf7;
+}
+
+.map-item {
+  padding: 18px 0;
+  border-top: 2px dashed #ecebf7;
+}
+
+.map-item:first-of-type { border-top: none; padding-top: 0; }
+
+.map-item-q {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.map-item .quiz-options { margin-bottom: 0; }
+
+.map-item-result {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  display: none;
+}
+
+.map-item-result.show { display: block; }
+.map-item-result.good { color: var(--good); }
+.map-item-result.bad { color: var(--bad); }
+
+/* ---------- Samengevat ---------- */
+
+.samengevat {
+  background: linear-gradient(135deg, var(--mint) 0%, var(--sky) 100%);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 28px 28px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.samengevat .block-icon { margin-bottom: 10px; }
+.samengevat h3 { margin: 0 0 10px; color: #fff; font-size: 1.3rem; }
+.samengevat p { margin: 0 auto; color: #f0fdfa; max-width: 60ch; }
+
+/* ---------- Footer ---------- */
+
+footer {
+  background: var(--deep2);
+  color: #b6aee0;
+  padding: 34px 20px;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+footer a { color: #d9d0ff; }
+
+/* ---------- Toegankelijkheid ---------- */
+
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--sun-dk);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
