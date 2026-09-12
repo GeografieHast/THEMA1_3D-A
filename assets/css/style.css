@@ -713,6 +713,22 @@ footer a { color: #d9d0ff; }
 .atlas-tip .icon { font-size: 1.2rem; line-height: 1; }
 .atlas-tip strong { color: var(--sun-dk); }
 
+.no-atlas-tip {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: #f1ecff;
+  border: 2px dashed var(--grape);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  font-size: 0.9rem;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+
+.no-atlas-tip .icon { font-size: 1.2rem; line-height: 1; }
+.no-atlas-tip strong { color: var(--grape-dk); }
+
 /* ---------- Toegankelijkheid ---------- */
 
 a:focus-visible, button:focus-visible {
