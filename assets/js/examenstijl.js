@@ -25,7 +25,9 @@ function buildShortAnswer(container, config) {
   }
 
   const accepted = config.accepted.map(normalize);
-  let counted = false;
+  const markMissieDone = (typeof attachMissieCounter === "function")
+    ? attachMissieCounter(container, container.id)
+    : null;
 
   function check() {
     const val = normalize(input.value);
@@ -40,12 +42,7 @@ function buildShortAnswer(container, config) {
       feedback.classList.add("bad");
       feedback.textContent = "🤔 Niet helemaal. Correct antwoord: " + config.accepted[0] + ".";
     }
-    if (!counted) {
-      counted = true;
-      if (typeof renderMissieCounterLine === "function") {
-        renderMissieCounterLine(container, container.id);
-      }
-    }
+    if (markMissieDone) markMissieDone();
   }
 
   checkBtn.addEventListener("click", check);
@@ -75,15 +72,17 @@ function buildOpenReveal(container, config) {
     });
   }
 
+  const markMissieDone = (typeof attachMissieCounter === "function")
+    ? attachMissieCounter(container, container.id)
+    : null;
+
   const btn = container.querySelector(".open-reveal-btn");
   const modelBox = container.querySelector(".open-model-answer");
   btn.addEventListener("click", () => {
     modelBox.classList.add("show");
     modelBox.innerHTML = `<strong>Modelantwoord:</strong><br>${config.model}`;
     btn.style.display = "none";
-    if (typeof renderMissieCounterLine === "function") {
-      renderMissieCounterLine(container, container.id);
-    }
+    if (markMissieDone) markMissieDone();
   });
 }
 
@@ -92,7 +91,9 @@ function buildRanking(container, config) {
   let current = config.items.map(i => i.id);
   // shuffle start order (simple fixed shuffle so it's not already correct)
   current = config.shuffled || current.slice().reverse();
-  let rankingCounted = false;
+  const markMissieDone = (typeof attachMissieCounter === "function")
+    ? attachMissieCounter(container, container.id)
+    : null;
 
   function render() {
     const rows = current.map((id, idx) => {
@@ -139,12 +140,7 @@ function buildRanking(container, config) {
         feedback.classList.add("bad");
         feedback.textContent = "🤔 Nog niet juist, probeer de volgorde te wijzigen met de pijltjes.";
       }
-      if (!rankingCounted) {
-        rankingCounted = true;
-        if (typeof renderMissieCounterLine === "function") {
-          renderMissieCounterLine(container, container.id);
-        }
-      }
+      if (markMissieDone) markMissieDone();
     });
   }
 

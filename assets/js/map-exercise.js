@@ -15,7 +15,9 @@ function buildMapExercise(container, config) {
 
   const list = container.querySelector(".map-items");
   let answered = 0;
-  let doneCounted = false;
+  const markMissieDone = (typeof attachMissieCounter === "function")
+    ? attachMissieCounter(container, container.id)
+    : null;
 
   config.items.forEach((item, idx) => {
     const wrap = document.createElement("div");
@@ -50,11 +52,8 @@ function buildMapExercise(container, config) {
         }
 
         answered++;
-        if (answered === config.items.length && !doneCounted) {
-          doneCounted = true;
-          if (typeof renderMissieCounterLine === "function") {
-            renderMissieCounterLine(container, container.id);
-          }
+        if (answered === config.items.length && markMissieDone) {
+          markMissieDone();
         }
       });
     });

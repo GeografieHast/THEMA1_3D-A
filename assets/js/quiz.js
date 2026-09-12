@@ -7,6 +7,9 @@ function buildQuiz(container, config) {
   let current = 0;
   let score = 0;
   let answered = false;
+  const markMissieDone = (typeof attachMissieCounter === "function")
+    ? attachMissieCounter(container, container.id)
+    : null;
 
   function render() {
     const q = questions[current];
@@ -86,9 +89,7 @@ function buildQuiz(container, config) {
       render();
     });
 
-    if (typeof renderMissieCounterLine === "function") {
-      renderMissieCounterLine(container, container.id);
-    }
+    if (markMissieDone) markMissieDone();
   }
 
   render();
