@@ -169,6 +169,7 @@
           <div class="map-exercise" id="map-australia1"></div>
           <div class="map-exercise" id="map-australia2"></div>
         </div>
+        <div id="exam-australia-open" style="margin-top:18px;"></div>
       </div>
     </div>
   </section>
@@ -360,9 +361,14 @@ buildMapExercise(document.getElementById("map-australia2"), {
   alt: "Klimaatkaart Australië: droge en natte klimaatzone",
   caption: "Klimaatzones (neerslag)",
   items: [
-    { q: "Ligt punt A in een droge of natte klimaatzone?", options: ["Droge klimaatzone", "Natte klimaatzone"], correct: 0 },
-    { q: "Ligt punt B in een droge of natte klimaatzone?", options: ["Droge klimaatzone", "Natte klimaatzone"], correct: 1 }
+    { q: "Ligt punt A in een droge of natte klimaatzone?", options: ["Droge klimaatzone", "Natte klimaatzone"], correct: 1 },
+    { q: "Ligt punt B in een droge of natte klimaatzone?", options: ["Droge klimaatzone", "Natte klimaatzone"], correct: 0 }
   ]
+});
+
+buildOpenReveal(document.getElementById("exam-australia-open"), {
+  q: "Bekijk beide klimaatkaarten opnieuw. Waar wonen de meeste mensen, bij punt A of bij punt B, en waarom?",
+  model: "Bij punt A wonen de meeste mensen. Punt A ligt in een gematigde en natte klimaatzone: de temperatuur is er aangenaam en er valt voldoende neerslag, wat gunstig is voor landbouw en dus voor bewoning. Punt B ligt in een gematigde maar droge klimaatzone. Door het gebrek aan neerslag biedt dat gebied minder kansen voor landbouw, waardoor het er dunbevolkt is."
 });
 
 buildShortAnswer(document.getElementById("exam-kort1"), {
