@@ -328,9 +328,15 @@ svg.icon {
   color: var(--ink);
   font-weight: bold;
   font-size: 0.85rem;
-  padding: 8px 14px;
+  padding: 7px 14px 7px 8px;
   border-radius: 999px;
   box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.mission-nav a:hover,
+.mission-nav a:focus-visible {
+  transform: translateY(-3px) rotate(-1.5deg);
+  box-shadow: 0 10px 0 rgba(36,34,58,0.14), 0 14px 22px rgba(36,34,58,0.14);
 }
 
 /* ---------- Secties ---------- */
@@ -347,19 +353,72 @@ section.block {
 }
 
 .block-icon {
-  font-size: 2.2rem;
-  display: block;
-  margin-bottom: 6px;
-  color: var(--grape-dk);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
 }
 
-#logboek .block-icon       { color: var(--sky-dk); }
-#flashcards .block-icon    { color: var(--grape-dk); }
-#quiz .block-icon          { color: var(--coral-dk); }
-#kaartmissies .block-icon  { color: var(--leaf-dk); }
-#examenstijl .block-icon   { color: var(--sun-dk); }
-#uitdaging .block-icon     { color: var(--coral); }
-.samengevat .block-icon    { color: var(--sky-dk); }
+/* ---------- Sticker-badges: kleurrijke rondjes achter de iconen ---------- */
+
+.icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  color: #fff;
+  box-shadow: var(--shadow-sm);
+}
+
+.icon-badge svg.icon { stroke-width: 2.3; }
+
+.badge-sky           { background: var(--sky-dk); }
+.badge-grape         { background: var(--grape-dk); }
+.badge-coral         { background: var(--coral-dk); }
+.badge-leaf          { background: var(--leaf-dk); }
+.badge-sun           { background: var(--sun-dk); }
+.badge-coral-bright  { background: var(--coral); }
+
+.block-icon .icon-badge {
+  width: 62px;
+  height: 62px;
+  transform: rotate(-5deg);
+  transition: transform 0.25s ease;
+}
+.block-icon .icon-badge svg.icon { width: 28px; height: 28px; }
+.block:hover .block-icon .icon-badge { transform: rotate(3deg) scale(1.05); }
+
+.mission-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.mission-nav .icon-badge {
+
+  width: 24px;
+  height: 24px;
+  transform: rotate(-4deg);
+  transition: transform 0.2s ease;
+}
+.mission-nav .icon-badge svg.icon { width: 13px; height: 13px; }
+.mission-nav a:hover .icon-badge { transform: rotate(8deg) scale(1.12); }
+
+.map-mission-title .icon-badge {
+  width: 34px;
+  height: 34px;
+  transform: rotate(-4deg);
+}
+.map-mission-title .icon-badge svg.icon { width: 18px; height: 18px; }
+
+.atlas-tip .icon-badge,
+.no-atlas-tip .icon-badge {
+  width: 30px;
+  height: 30px;
+  margin-top: 1px;
+  transform: rotate(-4deg);
+}
+.atlas-tip .icon-badge svg.icon,
+.no-atlas-tip .icon-badge svg.icon { width: 16px; height: 16px; }
 
 .block h2 {
   font-size: 1.6rem;
@@ -701,7 +760,7 @@ figure.book-figure figcaption {
   margin-bottom: 14px;
 }
 
-.map-mission-title .icon { font-size: 1.4rem; color: var(--leaf-dk); }
+
 
 .map-exercise img {
   border-radius: var(--radius-sm);
@@ -924,7 +983,7 @@ footer a { color: #d9d0ff; }
   margin-bottom: 16px;
 }
 
-.atlas-tip .icon { font-size: 1.2rem; line-height: 1; color: var(--sun-dk); }
+
 .atlas-tip strong { color: var(--sun-dk); }
 
 .no-atlas-tip {
@@ -940,7 +999,7 @@ footer a { color: #d9d0ff; }
   margin-bottom: 16px;
 }
 
-.no-atlas-tip .icon { font-size: 1.2rem; line-height: 1; color: var(--grape-dk); }
+
 .no-atlas-tip strong { color: var(--grape-dk); }
 
 /* ---------- Toegankelijkheid ---------- */
