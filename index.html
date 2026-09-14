@@ -3,28 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Missie: De aarde vanuit de ruimte 🚀</title>
+<title>Missie: De aarde vanuit de ruimte</title>
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+<svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+<defs>
+<symbol id="icon-book" viewBox="0 0 24 24"><path d="M12 6c-1.8-1.3-4.6-1.7-8-1v13c3.4-.7 6.2-.3 8 1 1.8-1.3 4.6-1.7 8-1V5c-3.4-.7-6.2-.3-8 1z"/><path d="M12 6v13"/></symbol>
+<symbol id="icon-cards" viewBox="0 0 24 24"><rect x="3" y="7" width="13" height="9" rx="2" transform="rotate(-8 9.5 11.5)"/><rect x="7" y="9" width="14" height="10" rx="2"/></symbol>
+<symbol id="icon-brain" viewBox="0 0 24 24"><path d="M9.5 4A3 3 0 0 0 7 8.5 2.7 2.7 0 0 0 6 13.7 3 3 0 0 0 9 18h.5V4z"/><path d="M14.5 4A3 3 0 0 1 17 8.5a2.7 2.7 0 0 1 1 5.2A3 3 0 0 1 15 18h-.5V4z"/><path d="M9.5 9h1M13.5 9h1M9.5 13.5h1M13.5 13.5h1"/></symbol>
+<symbol id="icon-map" viewBox="0 0 24 24"><path d="M9 4 3 6v15l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v15M15 6v15"/></symbol>
+<symbol id="icon-pencil" viewBox="0 0 24 24"><path d="M4 20l1-4.2L15.8 5 19 8.2 8.2 19 4 20z"/><path d="M14 6.2 17.8 10"/></symbol>
+<symbol id="icon-flame" viewBox="0 0 24 24"><path d="M12 2c1.6 2.6-.6 4.2-.6 7A2.6 2.6 0 0 0 14 11.6c1.4 0 2.4-1 2.4-2.4 2 2.2 2.8 5.4.7 8.3-1.4 2-3.7 2.5-5.1 2.5-3 0-6-2-6-6.2 0-4 3-6.2 4.6-9.8.2-.6.5-1.4 1.4-2z" fill="currentColor" stroke="none"/></symbol>
+<symbol id="icon-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></symbol>
+<symbol id="icon-satellite" viewBox="0 0 24 24"><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><rect x="1.3" y="2.3" width="5" height="3" rx="0.6" transform="rotate(45 3.8 3.8)"/><rect x="17.7" y="18.7" width="5" height="3" rx="0.6" transform="rotate(45 20.2 20.2)"/><path d="m6 6 2.6 2.6M18 18l-2.6-2.6M12 9.5V6M14.5 12H18"/><circle cx="19" cy="6" r="1" fill="currentColor" stroke="none"/></symbol>
+<symbol id="icon-cloud" viewBox="0 0 24 24"><path d="M7.5 18a4 4 0 0 1-.6-7.95A5 5 0 0 1 16.4 8.2 4.4 4.4 0 0 1 16.5 18h-9z"/></symbol>
+<symbol id="icon-palette" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 3 17.5c1-.35 1-1.8-.1-2.05a1.6 1.6 0 0 1 .3-3.15h.6A3.2 3.2 0 0 0 19 12.2C19 7.2 16 3 12 3z"/><circle cx="8" cy="10.5" r="1" fill="currentColor" stroke="none"/><circle cx="8" cy="14.5" r="1" fill="currentColor" stroke="none"/><circle cx="11.5" cy="17" r="1" fill="currentColor" stroke="none"/></symbol>
+<symbol id="icon-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5 13 13l-4.5 2.5L11 11l4.5-2.5z" fill="currentColor" stroke="none"/></symbol>
+<symbol id="icon-layers" viewBox="0 0 24 24"><path d="M12 3 3 8l9 5 9-5-9-5z"/><path d="M3 12l9 5 9-5"/><path d="M3 16l9 5 9-5"/></symbol>
+<symbol id="icon-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="16.5" cy="9.5" r="2.3"/><path d="M3.5 20c0-3.3 2.5-6 5.5-6s5.5 2.7 5.5 6"/><path d="M14.7 14.3c2 .2 3.8 2 3.8 5.7"/></symbol>
+<symbol id="icon-building" viewBox="0 0 24 24"><rect x="4" y="9" width="8" height="12"/><rect x="12.5" y="4" width="6.5" height="17"/><path d="M6.5 12h1M9.5 12h1M6.5 15h1M9.5 15h1M6.5 18h1M9.5 18h1M15 7h1M17.5 7h1M15 10h1M17.5 10h1M15 13h1M17.5 13h1"/></symbol>
+<symbol id="icon-city" viewBox="0 0 24 24"><rect x="2.5" y="11" width="4" height="10"/><rect x="7.5" y="6" width="4" height="15"/><rect x="12.5" y="13" width="4" height="8"/><rect x="17.5" y="9" width="3.5" height="12"/><circle cx="18.5" cy="4" r="1.6" fill="currentColor" stroke="none"/></symbol>
+<symbol id="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></symbol>
+<symbol id="icon-star" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.6-5 4.5 1.5 6.6L12 16.9 6 20.3l1.5-6.6-5-4.5 6.6-.6L12 2.5z" fill="currentColor" stroke="none"/></symbol>
+<symbol id="icon-rocket-mini" viewBox="0 0 24 24"><path d="M12 2c3 3 4.2 8 3.4 13-.3 1.7-1.3 3-3.4 4-2.1-1-3.1-2.3-3.4-4C7.8 10 9 5 12 2z"/><circle cx="12" cy="9.5" r="1.7" fill="currentColor" stroke="none"/><path d="M8.6 15c-2 .3-3 1.8-3.2 3.8 1.8-.2 3.3-1 4-2.6M15.4 15c2 .3 3 1.8 3.2 3.8-1.8-.2-3.3-1-4-2.6" fill="currentColor" stroke="none"/></symbol>
+</defs>
+</svg>
 
 <div class="hero">
   <div class="hero-stars"></div>
+  <div class="hero-moon" aria-hidden="true"></div>
+  <div class="rocket-scene" id="heroRocketScene" tabindex="0" role="button" aria-label="Tik of duw op de raket voor een boost" title="Tik op de raket voor een boost!">
+    <div class="exhaust">
+      <span></span><span></span><span></span><span></span>
+    </div>
+    <svg class="rocket-svg" viewBox="0 0 60 92" aria-hidden="true">
+      <ellipse class="rocket-flame" cx="30" cy="80" rx="7" ry="15"/>
+      <ellipse class="rocket-flame rocket-flame-inner" cx="30" cy="77" rx="3.6" ry="9"/>
+      <path class="rocket-fin rocket-fin-l" d="M21 48c-8 2-13 10-14 20 8-1 14-6 17-13z"/>
+      <path class="rocket-fin rocket-fin-r" d="M39 48c8 2 13 10 14 20-8-1-14-6-17-13z"/>
+      <path class="rocket-body" d="M30 3c9 10 12 30 9 48-1 6.5-4.2 11.5-9 14.5-4.8-3-8-8-9-14.5-3-18 0-38 9-48z"/>
+      <circle class="rocket-window" cx="30" cy="35" r="6.2"/>
+      <circle class="rocket-window-inner" cx="30" cy="35" r="3.2"/>
+    </svg>
+  </div>
   <div class="hero-inner">
     <span class="badge-pill">Thema 1 · Hoofdstuk 1</span>
-    <h1><span class="rocket">🚀</span> Missie: de aarde vanuit de ruimte</h1>
+    <h1>Missie: de aarde vanuit de ruimte</h1>
     <p>Stap aan boord van het ISS en ontdek hoe de aarde eruitziet vanuit de ruimte: de atmosfeer, de continenten, en waarom mensen niet overal even dicht op elkaar wonen.</p>
     <div class="hero-cta">
       <a href="#logboek"><button class="btn">Start de missie</button></a>
       <a href="#quiz"><button class="btn alt">Meteen naar de quiz</button></a>
     </div>
     <div class="mission-nav">
-      <a href="#logboek">📖 Logboek</a>
-      <a href="#flashcards">🃏 Geheugenkaarten</a>
-      <a href="#quiz">🧠 Quiz</a>
-      <a href="#kaartmissies">🗺️ Kaartmissies</a>
-      <a href="#examenstijl">📝 Oefen zoals op de toets</a>
-      <a href="#uitdaging">🔥 Uitdaging</a>
+      <a href="#logboek"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg> Logboek</a>
+      <a href="#flashcards"><svg class="icon" aria-hidden="true"><use href="#icon-cards"></use></svg> Geheugenkaarten</a>
+      <a href="#quiz"><svg class="icon" aria-hidden="true"><use href="#icon-brain"></use></svg> Quiz</a>
+      <a href="#kaartmissies"><svg class="icon" aria-hidden="true"><use href="#icon-map"></use></svg> Kaartmissies</a>
+      <a href="#examenstijl"><svg class="icon" aria-hidden="true"><use href="#icon-pencil"></use></svg> Oefen zoals op de toets</a>
+      <a href="#uitdaging"><svg class="icon" aria-hidden="true"><use href="#icon-flame"></use></svg> Uitdaging</a>
     </div>
   </div>
 </div>
@@ -34,27 +71,27 @@
   <!-- THEORIE -->
   <section class="block" id="logboek">
     <div class="block-head">
-      <span class="block-icon">📖</span>
+      <span class="block-icon"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span>
       <h2>Missielogboek</h2>
       <p class="block-intro">De belangrijkste ontdekkingen uit dit hoofdstuk, verzameld tijdens de vlucht.</p>
     </div>
 
     <div class="theory-grid">
       <div class="theory-card">
-        <span class="stamp c-sky">🌫️ Atmosfeer</span>
+        <span class="stamp c-sky"><svg class="icon" aria-hidden="true"><use href="#icon-cloud"></use></svg> Atmosfeer</span>
         <h3>De atmosfeer</h3>
         <p>De atmosfeer is het mengsel van gassen rond de aarde. Op foto's vanuit het ISS zie je ze als een lichtblauwe, wazige laag. Samen vormen de gassen een beschermende laag: ze houden schadelijke straling van de zon tegen en laten het zichtbare licht door.</p>
       </div>
 
       <div class="theory-card">
-        <span class="stamp c-grape">🗺️ Continenten &amp; werelddelen</span>
+        <span class="stamp c-grape"><svg class="icon" aria-hidden="true"><use href="#icon-map"></use></svg> Continenten &amp; werelddelen</span>
         <h3>Continenten en werelddelen</h3>
         <p>Vanuit de ruimte zie je vooral blauw: ongeveer 70% van het aardoppervlak is water (oceanen en zeeën), 30% is land. Een <strong>continent</strong> is een grote aaneengesloten landmassa, niet of nauwelijks verbonden met andere landmassa's. Er zijn vijf continenten: Eurazië, Amerika, Afrika, Antarctica en Australië.</p>
         <p>Een <strong>werelddeel</strong> is een grote landmassa afgescheiden door natuurlijke elementen (oceanen, gebergten, rivieren), inclusief de eilanden errond. Zo behoort Madagaskar tot het werelddeel Afrika, maar niet tot het continent Afrika. Er zijn acht werelddelen: Europa, Noord-Amerika, Centraal- of Midden-Amerika, Zuid-Amerika, Afrika, Azië, Antarctica en Oceanië.</p>
       </div>
 
       <div class="theory-card">
-        <span class="stamp c-sun">🎨 Kleuren herkennen</span>
+        <span class="stamp c-sun"><svg class="icon" aria-hidden="true"><use href="#icon-palette"></use></svg> Kleuren herkennen</span>
         <h3>De verschillende kleuren aan het aardoppervlak</h3>
         <p>Uit de kleuren op een satellietbeeld kan je landschapselementen afleiden:</p>
         <ul>
@@ -72,7 +109,7 @@
       </div>
 
       <div class="theory-card">
-        <span class="stamp c-leaf">🧭 Landschapsvormende lagen</span>
+        <span class="stamp c-leaf"><svg class="icon" aria-hidden="true"><use href="#icon-layers"></use></svg> Landschapsvormende lagen</span>
         <h3>De fysischgeografische landschapsvormende lagen</h3>
         <p>Een landschap bestaat uit verschillende lagen die elkaar beïnvloeden. Lagen die door de natuur ontstaan zijn, zonder ingrijpen van de mens, noem je <strong>fysischgeografische</strong> (of natuurlijke) landschapsvormende lagen. Er zijn er zes:</p>
         <ul>
@@ -91,7 +128,7 @@
       </div>
 
       <div class="theory-card">
-        <span class="stamp c-sky">🧭 Ligging</span>
+        <span class="stamp c-sky"><svg class="icon" aria-hidden="true"><use href="#icon-compass"></use></svg> Ligging</span>
         <h3>Absolute en relatieve ligging</h3>
         <p>Om een plaats correct te situeren, gebruik je twee soorten ligging:</p>
         <ul>
@@ -102,7 +139,7 @@
       </div>
 
       <div class="theory-card">
-        <span class="stamp c-leaf">👥 Bevolkingsspreiding</span>
+        <span class="stamp c-leaf"><svg class="icon" aria-hidden="true"><use href="#icon-people"></use></svg> Bevolkingsspreiding</span>
         <h3>De aarde biedt kansen</h3>
         <p>De bevolking is onregelmatig over de aarde verspreid. De <strong>bevolkingsdichtheid</strong> geeft weer hoeveel mensen er gemiddeld per km² wonen. De mens woont waar de aarde kansen biedt om te leven, voedsel te produceren en een inkomen te verwerven. Alle zes fysischgeografische landschapsvormende lagen hierboven spelen daarin een rol:</p>
         <ul>
@@ -117,7 +154,7 @@
       </div>
 
       <div class="theory-card">
-        <span class="stamp c-coral">🏗️ De mens creëert kansen</span>
+        <span class="stamp c-coral"><svg class="icon" aria-hidden="true"><use href="#icon-building"></use></svg> De mens creëert kansen</span>
         <h3>De mens creëert kansen</h3>
         <p>Technologische vernieuwingen maken ook minder gunstige gebieden bewoonbaar. Dankzij irrigatietechnieken is de droge Nijlvallei dichtbevolkt. In China worden reliëfrijke gebieden door terrasbouw omgetoverd tot landbouwgrond.</p>
         <p>Sinds de 19de eeuw zorgde de industriële revolutie voor technologische vernieuwingen en beter transport. Mensen trokken naar nieuwe gebieden (bv. de oostkust van Noord-Amerika) en naar grondstoffen in Afrika. Handel en transport werden belangrijker, en steden aan de kust groeiden. Daardoor vallen de dichtstbevolkte gebieden vandaag niet meer altijd samen met de vruchtbaarste landbouwstreken.</p>
@@ -128,7 +165,7 @@
   <!-- FLASHCARDS -->
   <section class="block" id="flashcards">
     <div class="block-head">
-      <span class="block-icon">🃏</span>
+      <span class="block-icon"><svg class="icon" aria-hidden="true"><use href="#icon-cards"></use></svg></span>
       <h2>Geheugenkaarten</h2>
       <p class="block-intro">Tik op een kaart om ze om te draaien en het antwoord te zien.</p>
     </div>
@@ -138,7 +175,7 @@
   <!-- QUIZ -->
   <section class="block" id="quiz">
     <div class="block-head">
-      <span class="block-icon">🧠</span>
+      <span class="block-icon"><svg class="icon" aria-hidden="true"><use href="#icon-brain"></use></svg></span>
       <h2>Ruimtequiz</h2>
       <p class="block-intro">Verdien je sterren: hoe meer juiste antwoorden, hoe verder je raket vliegt.</p>
     </div>
@@ -148,39 +185,39 @@
   <!-- KAARTMISSIES -->
   <section class="block" id="kaartmissies">
     <div class="block-head">
-      <span class="block-icon">🗺️</span>
+      <span class="block-icon"><svg class="icon" aria-hidden="true"><use href="#icon-map"></use></svg></span>
       <h2>Kaartmissies</h2>
       <p class="block-intro">Echte satellietbeelden en kaarten uit je handboek. Je mag je atlas erbij nemen wanneer je twijfelt.</p>
     </div>
 
     <div class="theory-grid">
       <div class="map-mission">
-        <div class="map-mission-title"><span class="icon">🌏</span> Missie 1: continenten en oceanen (1)</div>
-        <div class="no-atlas-tip"><span class="icon">🧠</span><span><strong>Zonder atlas:</strong> de continenten en oceanen moet je uit het hoofd kennen, ook op de toets.</span></div>
+        <div class="map-mission-title"><span class="icon"><svg class="icon" aria-hidden="true"><use href="#icon-globe"></use></svg></span> Missie 1: continenten en oceanen (1)</div>
+        <div class="no-atlas-tip"><span class="icon"><svg class="icon" aria-hidden="true"><use href="#icon-brain"></use></svg></span><span><strong>Zonder atlas:</strong> de continenten en oceanen moet je uit het hoofd kennen, ook op de toets.</span></div>
         <div class="map-exercise" id="map-globes1"></div>
       </div>
 
       <div class="map-mission">
-        <div class="map-mission-title"><span class="icon">🌎</span> Missie 2: Noord- en Zuid-Amerika</div>
-        <div class="no-atlas-tip"><span class="icon">🧠</span><span><strong>Zonder atlas:</strong> de continenten en oceanen moet je uit het hoofd kennen, ook op de toets.</span></div>
+        <div class="map-mission-title"><span class="icon"><svg class="icon" aria-hidden="true"><use href="#icon-globe"></use></svg></span> Missie 2: Noord- en Zuid-Amerika</div>
+        <div class="no-atlas-tip"><span class="icon"><svg class="icon" aria-hidden="true"><use href="#icon-brain"></use></svg></span><span><strong>Zonder atlas:</strong> de continenten en oceanen moet je uit het hoofd kennen, ook op de toets.</span></div>
         <div class="map-exercise" id="map-globes2"></div>
       </div>
 
       <div class="map-mission">
-        <div class="map-mission-title"><span class="icon">🌃</span> Missie 3: verlichte steden 's nachts</div>
-        <div class="atlas-tip"><span class="icon">📚</span><span><strong>Atlas-tip:</strong> zoek de steden op met de kaart van Azië in je atlas.</span></div>
+        <div class="map-mission-title"><span class="icon"><svg class="icon" aria-hidden="true"><use href="#icon-city"></use></svg></span> Missie 3: verlichte steden 's nachts</div>
+        <div class="atlas-tip"><span class="icon"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span><span><strong>Atlas-tip:</strong> zoek de steden op met de kaart van Azië in je atlas.</span></div>
         <div class="map-exercise" id="map-nightlights"></div>
       </div>
 
       <div class="map-mission">
-        <div class="map-mission-title"><span class="icon">🌍</span> Missie 4: Afrika vanuit de ruimte</div>
-        <div class="no-atlas-tip"><span class="icon">🧠</span><span><strong>Zonder atlas:</strong> continenten en werelddelen moet je uit het hoofd kennen.</span></div>
+        <div class="map-mission-title"><span class="icon"><svg class="icon" aria-hidden="true"><use href="#icon-globe"></use></svg></span> Missie 4: Afrika vanuit de ruimte</div>
+        <div class="no-atlas-tip"><span class="icon"><svg class="icon" aria-hidden="true"><use href="#icon-brain"></use></svg></span><span><strong>Zonder atlas:</strong> continenten en werelddelen moet je uit het hoofd kennen.</span></div>
         <div class="map-exercise" id="map-africa"></div>
       </div>
 
       <div class="map-mission">
-        <div class="map-mission-title"><span class="icon">🦘</span> Missie 5: klimaat &amp; bevolking in Australië</div>
-        <div class="atlas-tip"><span class="icon">📚</span><span><strong>Atlas-tip:</strong> leg de klimaatkaart van Australië naast de wereldkaart van de bevolkingsdichtheid in je atlas om het verband te zien.</span></div>
+        <div class="map-mission-title"><span class="icon"><svg class="icon" aria-hidden="true"><use href="#icon-sun"></use></svg></span> Missie 5: klimaat &amp; bevolking in Australië</div>
+        <div class="atlas-tip"><span class="icon"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span><span><strong>Atlas-tip:</strong> leg de klimaatkaart van Australië naast de wereldkaart van de bevolkingsdichtheid in je atlas om het verband te zien.</span></div>
         <div class="two-col">
           <div class="map-exercise" id="map-australia1"></div>
           <div class="map-exercise" id="map-australia2"></div>
@@ -192,7 +229,7 @@
 
   <section class="block">
     <div class="samengevat">
-      <span class="block-icon">🌍</span>
+      <span class="block-icon"><svg class="icon" aria-hidden="true"><use href="#icon-globe"></use></svg></span>
       <h3>Samengevat</h3>
       <p>Als je vanuit de ruimte naar de aarde kijkt, zie je de atmosfeer als een schil rond de aarde. De bevolking woont ongelijk verspreid over de aarde. Alle zes fysischgeografische landschapsvormende lagen (natuurlijke vegetatie, klimaat, water, reliëf, bodem en ondergrond) beïnvloeden samen die spreiding. De mens creëert daarnaast ook zelf bijkomende kansen.</p>
     </div>
@@ -201,7 +238,7 @@
   <!-- EXAMENSTIJL -->
   <section class="block" id="examenstijl">
     <div class="block-head">
-      <span class="block-icon">📝</span>
+      <span class="block-icon"><svg class="icon" aria-hidden="true"><use href="#icon-pencil"></use></svg></span>
       <h2>Oefen zoals op de toets</h2>
       <p class="block-intro">Bij een echte overhoring krijg je niet enkel meerkeuzevragen. Oefen hier ook met korte antwoorden, open vragen, juist/fout met verklaring, en rangschikken, net zoals op de toets.</p>
     </div>
@@ -210,19 +247,19 @@
 
       <div class="exam-card">
         <span class="exam-type">Kort antwoord</span>
-        <div class="no-atlas-tip"><span class="icon">🧠</span><span><strong>Zonder atlas:</strong> continenten moet je uit het hoofd kennen.</span></div>
+        <div class="no-atlas-tip"><span class="icon"><svg class="icon" aria-hidden="true"><use href="#icon-brain"></use></svg></span><span><strong>Zonder atlas:</strong> continenten moet je uit het hoofd kennen.</span></div>
         <div id="exam-kort1"></div>
       </div>
 
       <div class="exam-card">
         <span class="exam-type">Kort antwoord</span>
-        <div class="no-atlas-tip"><span class="icon">🧠</span><span><strong>Zonder atlas:</strong> continenten moet je uit het hoofd kennen.</span></div>
+        <div class="no-atlas-tip"><span class="icon"><svg class="icon" aria-hidden="true"><use href="#icon-brain"></use></svg></span><span><strong>Zonder atlas:</strong> continenten moet je uit het hoofd kennen.</span></div>
         <div id="exam-kort2"></div>
       </div>
 
       <div class="exam-card">
         <span class="exam-type">Woorden/plaatsen schikken</span>
-        <div class="atlas-tip"><span class="icon">📚</span><span><strong>Atlas-tip:</strong> je kan je antwoord controleren met de themakaart van de bevolkingsdichtheid in je atlas.</span></div>
+        <div class="atlas-tip"><span class="icon"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span><span><strong>Atlas-tip:</strong> je kan je antwoord controleren met de themakaart van de bevolkingsdichtheid in je atlas.</span></div>
         <div id="exam-ranking"></div>
       </div>
 
@@ -272,7 +309,7 @@
   <!-- UITDAGING -->
   <section class="block" id="uitdaging">
     <div class="block-head">
-      <span class="block-icon">🔥</span>
+      <span class="block-icon"><svg class="icon" aria-hidden="true"><use href="#icon-flame"></use></svg></span>
       <h2>Uitdaging: nieuwe voorbeelden</h2>
       <p class="block-intro">Pas wat je geleerd hebt toe op een nieuwe uitdaging.</p>
     </div>
@@ -303,8 +340,8 @@
 </main>
 
 <footer>
-  Missiecontrole voor <em>Concreet 3 · Thema 1, Hoofdstuk 1: De aarde vanuit de ruimte</em> (Pelckmans Uitgevers), samengesteld voor eigen lesgebruik. 🛰️
-  <div class="visit-counter" id="visit-counter">🛰️ bezoekersteller laadt…</div>
+  Missiecontrole voor <em>Concreet 3 · Thema 1, Hoofdstuk 1: De aarde vanuit de ruimte</em> (Pelckmans Uitgevers), samengesteld voor eigen lesgebruik.
+  <div class="visit-counter" id="visit-counter"><svg class="icon" aria-hidden="true"><use href="#icon-satellite"></use></svg> bezoekersteller laadt…</div>
   <p class="curriculum-note">LPD 2, LPD 19 · MD 09.01, MD 09.07, MD 13.03</p>
 </footer>
 
@@ -313,6 +350,7 @@
 <script src="assets/js/quiz.js"></script>
 <script src="assets/js/map-exercise.js"></script>
 <script src="assets/js/examenstijl.js"></script>
+<script src="assets/js/hero-rocket.js"></script>
 <script>
 buildFlashcards(document.getElementById("flashcards-1"), {
   cards: [

@@ -43,12 +43,12 @@ function buildMapExercise(container, config) {
         if (chosen === item.correct) {
           btn.classList.add("correct");
           result.classList.add("show", "good");
-          result.textContent = "🎉 Juist!" + (item.explain ? " " + item.explain : "");
+          result.textContent = "Juist!" + (item.explain ? " " + item.explain : "");
         } else {
           btn.classList.add("incorrect");
           buttons[item.correct].classList.add("correct");
           result.classList.add("show", "bad");
-          result.textContent = "🤔 Niet juist, het juiste antwoord is aangeduid." + (item.explain ? " " + item.explain : "");
+          result.textContent = "Niet juist, het juiste antwoord is aangeduid." + (item.explain ? " " + item.explain : "");
         }
 
         answered++;

@@ -31,7 +31,7 @@ function missieCounterGet(key, onDone) {
 }
 
 function missieCounterText(value) {
-  return `👥 ${value} ${value === 1 ? "leerling maakte" : "leerlingen maakten"} deze opdracht al`;
+  return `${value} ${value === 1 ? "leerling maakte" : "leerlingen maakten"} deze opdracht al`;
 }
 
 /* Zet meteen een klein regeltje net ná (dus als broer/zus van, niet als
@@ -44,7 +44,7 @@ function missieCounterText(value) {
 function attachMissieCounter(container, key) {
   const line = document.createElement("div");
   line.className = "missie-counter";
-  line.textContent = "👥 …";
+  line.textContent = "…";
   if (container.parentNode) {
     container.parentNode.insertBefore(line, container.nextSibling);
   } else {
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const key = "site-bezoekers";
   const show = (value) => {
     if (value == null) { el.remove(); return; }
-    el.textContent = `🛰️ Bezoekers: ${value}`;
+    el.textContent = `Bezoekers: ${value}`;
   };
   if (sessionStorage.getItem("missie-bezoeker-geteld")) {
     missieCounterGet(key, show);

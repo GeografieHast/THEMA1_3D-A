@@ -17,7 +17,12 @@ function buildQuiz(container, config) {
 
     container.innerHTML = `
       <div class="quiz-progress">Vraag ${current + 1} van ${questions.length}</div>
-      <div class="quiz-progress-bar"><div class="quiz-progress-fill" style="width:${pct}%"></div></div>
+      <div class="quiz-progress-bar"><div class="quiz-progress-fill" style="width:${pct}%">
+        <svg class="quiz-fill-rocket" viewBox="0 0 24 24" aria-hidden="true">
+          <use href="#icon-rocket-mini"></use>
+          <ellipse class="rocket-flame" cx="12" cy="20.5" rx="2.2" ry="4"/>
+        </svg>
+      </div></div>
       <div class="quiz-question">${q.q}</div>
       ${q.img ? `<img src="${q.img}" alt="" style="border-radius:10px;margin-bottom:16px;border:1px solid #e6e0d3;">` : ""}
       <div class="quiz-options">
@@ -44,12 +49,12 @@ function buildQuiz(container, config) {
           btn.classList.add("correct");
           score++;
           feedback.classList.add("show", "good");
-          feedback.textContent = q.explain ? "🎉 Juist! " + q.explain : "🎉 Juist!";
+          feedback.textContent = q.explain ? "Juist! " + q.explain : "Juist!";
         } else {
           btn.classList.add("incorrect");
           optionButtons[q.correct].classList.add("correct");
           feedback.classList.add("show", "bad");
-          feedback.textContent = q.explain ? "🤔 Niet juist. " + q.explain : "🤔 Niet juist.";
+          feedback.textContent = q.explain ? "Niet juist. " + q.explain : "Niet juist.";
         }
 
         const nextBtn = container.querySelector("#quiz-next");
@@ -70,16 +75,20 @@ function buildQuiz(container, config) {
   function renderScore() {
     const pct = Math.round((score / questions.length) * 100);
     let msg = "Goed geprobeerd, herhaal dit hoofdstuk nog eens!";
-    let stars = "⭐";
-    let emoji = "🛰️";
-    if (pct >= 80) { msg = "Topmissie! Je beheerst deze leerstof heel goed."; stars = "⭐⭐⭐"; emoji = "🚀"; }
-    else if (pct >= 50) { msg = "Al behoorlijk goed, maar er is nog winst te halen."; stars = "⭐⭐"; emoji = "🪐"; }
+    let starCount = 1;
+    let moodIcon = "icon-satellite";
+    if (pct >= 80) { msg = "Topmissie! Je beheerst deze leerstof heel goed."; starCount = 3; moodIcon = "icon-rocket-mini"; }
+    else if (pct >= 50) { msg = "Al behoorlijk goed, maar er is nog winst te halen."; starCount = 2; moodIcon = "icon-globe"; }
+
+    const starsHtml = [0, 1, 2].map(i =>
+      `<svg class="icon score-star${i < starCount ? " filled" : ""}" aria-hidden="true"><use href="#icon-star"></use></svg>`
+    ).join("");
 
     container.innerHTML = `
       <div class="quiz-score">
-        <div class="stars">${stars}</div>
+        <div class="stars">${starsHtml}</div>
         <div class="big">${score} / ${questions.length}</div>
-        <p>${emoji} ${msg}</p>
+        <p><svg class="icon score-mood" aria-hidden="true"><use href="#${moodIcon}"></use></svg> ${msg}</p>
         <button class="btn alt" id="quiz-restart">Opnieuw proberen</button>
       </div>
     `;

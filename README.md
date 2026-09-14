@@ -1,4 +1,4 @@
-# Missie: de aarde vanuit de ruimte 🚀
+# Missie: de aarde vanuit de ruimte
 
 Studiesite voor leerlingen bij **Thema 1, Hoofdstuk 1: De aarde vanuit de ruimte**
 (Concreet 3, Pelckmans Uitgevers). Bevat theorie, flashcards, een quiz en
@@ -33,7 +33,7 @@ assets/img/*.png           → afbeeldingen, geknipt uit het handboek
 
 Onderaan de site staat een bezoekersteller, en bij elke opdracht (quiz,
 kaartmissie, kort antwoord, open vraag, rangschikken) verschijnt na het
-afronden een klein regeltje "👥 X leerlingen maakten deze opdracht al".
+afronden een klein regeltje "X leerlingen maakten deze opdracht al".
 Beide draaien op **Abacus** (abacus.jasoncameron.dev), een gratis telAPI
 zonder account. De vorige teller (visitor-badge.laobi.icu) is vervangen
 omdat dat soort losse "badge"-plaatjes regelmatig offline gaat en vaak

@@ -36,11 +36,11 @@ function buildShortAnswer(container, config) {
     if (correct) {
       feedback.classList.remove("bad");
       feedback.classList.add("good");
-      feedback.textContent = "🎉 Juist! Correct antwoord: " + config.accepted[0] + ".";
+      feedback.textContent = "Juist! Correct antwoord: " + config.accepted[0] + ".";
     } else {
       feedback.classList.remove("good");
       feedback.classList.add("bad");
-      feedback.textContent = "🤔 Niet helemaal. Correct antwoord: " + config.accepted[0] + ".";
+      feedback.textContent = "Niet helemaal. Correct antwoord: " + config.accepted[0] + ".";
     }
     if (markMissieDone) markMissieDone();
   }
@@ -67,7 +67,7 @@ function buildOpenReveal(container, config) {
     const hintBox = container.querySelector(".open-hint");
     hintBtn.addEventListener("click", () => {
       hintBox.classList.add("show");
-      hintBox.innerHTML = `💡 <strong>Hint:</strong> ${config.hint}`;
+      hintBox.innerHTML = `<strong>Hint:</strong> ${config.hint}`;
       hintBtn.style.display = "none";
     });
   }
@@ -140,11 +140,11 @@ function buildRanking(container, config) {
       if (isCorrect) {
         feedback.classList.remove("bad");
         feedback.classList.add("good");
-        feedback.textContent = "🎉 Juist gerangschikt!";
+        feedback.textContent = "Juist gerangschikt!";
       } else {
         feedback.classList.remove("good");
         feedback.classList.add("bad");
-        feedback.textContent = "🤔 Nog niet juist, probeer de volgorde te wijzigen met de pijltjes.";
+        feedback.textContent = "Nog niet juist, probeer de volgorde te wijzigen met de pijltjes.";
       }
       if (markMissieDone) markMissieDone();
     });
