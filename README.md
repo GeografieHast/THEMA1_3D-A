@@ -4,6 +4,34 @@ Studiesite voor leerlingen bij **Thema 1, Hoofdstuk 1: De aarde vanuit de ruimte
 (Concreet 3, Pelckmans Uitgevers). Bevat theorie, flashcards, een quiz en
 kaartoefeningen op echte satellietbeelden/kaarten uit het handboek.
 
+## Update (15 september)
+
+- **Alle officiële figuren uit het handboek toegevoegd**, met schone (niet-
+  watermerk) versies die je zelf aanleverde: 1.1 (maan/ISS), 1.3 (Las Vegas,
+  stond er al), 1.4 (nachtbeeld ISS), 1.5 (dun/dichtbevolkt-schaal), 1.6
+  (Kulusuk), 1.7 (Rio de Janeiro), 1.8 (Nederlandse zandgronden), 1.9
+  (Vietnam-terrassen).
+- **Ontbrekende oefeningen uit het handboek toegevoegd**, na vergelijking met
+  `ZONE_CONCREET_.pdf`:
+  - de eilanden-vraag bij Missie 4 (Afrika): 3 eilanden/eilandengroepen noemen
+  - een volledig nieuwe "Missie 4b": de 5 genummerde gebieden in Afrika
+    (Congobekken, Nijlvallei, Rwanda en Burundi, Sahara, westkust van Afrika)
+    met bron B, elk met dun-/dichtbevolkt + verklaring
+  - een nieuwe "Missie: Mumbai en Tibet" met de echte foto's C/D
+  - de "verticale relatie temperatuur/neerslag"-vraag bij Missie 5
+- **Missiestrook** bovenaan elke kaart (theorie, oefeningen, quiz), in de
+  kleuren van de hero-balk zelf (grape → sky → mint).
+- **Kronkelend missiepad + raketje**, zoals bij de doorstroom-site, maar met
+  een eigen kleur (blauw i.p.v. koraal) en het bestaande D/A-vinraketje in
+  plaats van de shuttle van doorstroom, zodat de twee sites elk hun eigen
+  herkenbare "missie-mascotte" behouden.
+
+**Let op, nog te bekijken:** de brontekst (`ZONE_CONCREET_.pdf`) zegt zelf
+"Er zijn zes continenten... Er zijn zes grote werelddelen", wat afwijkt van
+de 5 continenten / 8 werelddelen die nu op de site staan. Ik heb dat bewust
+niet aangepast, want dat was eerder al een doelbewuste correctie van jou op
+het handboek. Wil je dat toch naar 6/6 aanpassen, laat maar weten.
+
 ## Publiceren op GitHub Pages
 
 1. Maak een nieuwe (of gebruik een bestaande) GitHub-repository.

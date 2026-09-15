@@ -6,10 +6,18 @@
      items: [{ q: "Wat stelt nummer 1 voor?", options: [...], correct: 0 }]
    })
 */
+/* Kaartoefening: een afbeelding (optioneel) uit het boek, met een reeks
+   meerkeuzevragen die elk apart en meteen nagekeken worden.
+   Gebruik: buildMapExercise(el, {
+     image: "assets/img/....png",   // optioneel: weglaten voor een oefening zonder afbeelding
+     caption: "...",
+     items: [{ q: "Wat stelt nummer 1 voor?", options: [...], correct: 0 }]
+   })
+*/
 function buildMapExercise(container, config) {
   container.innerHTML = `
-    <img src="${config.image}" alt="${config.alt || ""}">
-    ${config.caption ? `<p style="color:var(--ink-soft);font-size:0.88rem;margin-top:-10px;">${config.caption}</p>` : ""}
+    ${config.image ? `<img src="${config.image}" alt="${config.alt || ""}">` : ""}
+    ${config.caption ? `<p style="color:var(--ink-soft);font-size:0.88rem;${config.image ? "margin-top:-10px;" : "margin-top:0;"}">${config.caption}</p>` : ""}
     <div class="map-items"></div>
   `;
 

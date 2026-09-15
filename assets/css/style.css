@@ -56,6 +56,69 @@ a { color: var(--sky-dk); }
   max-width: var(--maxw);
   margin: 0 auto;
   padding: 0 20px;
+  position: relative;
+}
+
+/* ---------- Missiepad: kronkelend spoor met meebewegend raketje ---------- */
+
+.mission-trail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.mission-trail-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.mission-trail-svg path {
+  fill: none;
+  stroke: var(--sky-dk);
+  stroke-width: 3;
+  stroke-dasharray: 2 15;
+  stroke-linecap: round;
+  opacity: 0.4;
+}
+
+.mission-trail-rocket {
+  position: fixed;
+  top: 130px;
+  left: 50%;
+  width: 30px;
+  height: 40px;
+  transform: translate(-50%, -50%) rotate(180deg);
+  will-change: left;
+  z-index: 40;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease, left 0.05s linear;
+}
+
+.mission-trail-rocket.is-visible {
+  opacity: 1;
+}
+
+.mission-trail-rocket-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 3px 5px rgba(36,34,58,0.3));
+}
+
+.mission-trail-rocket-body { fill: #fff; stroke: var(--sky-dk); stroke-width: 1.2; }
+.mission-trail-rocket-window { fill: var(--sky); }
+.mission-trail-rocket-window-inner { fill: rgba(255,255,255,0.6); }
+.mission-trail-rocket-fin { fill: var(--coral); }
+.mission-trail-rocket-flame { fill: var(--sun); }
+
+@media (prefers-reduced-motion: reduce) {
+  .mission-trail-rocket { transition: none !important; }
 }
 
 /* ---------- HERO: startraket ---------- */
@@ -442,9 +505,20 @@ section.block {
 .theory-card {
   background: var(--card);
   border-radius: var(--radius);
-  padding: 22px 24px;
+  padding: 26px 24px 22px;
   box-shadow: var(--shadow);
   position: relative;
+  overflow: hidden;
+}
+.theory-card::before,
+.exam-card::before,
+.map-mission::before,
+.quiz-box::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--grape) 0%, var(--sky) 55%, var(--mint) 100%);
 }
 
 .theory-card h3 {
@@ -583,7 +657,9 @@ figure.book-figure figcaption {
   background: var(--card);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 28px;
+  padding: 32px 28px 28px;
+  position: relative;
+  overflow: hidden;
 }
 
 .quiz-progress {
@@ -747,8 +823,9 @@ figure.book-figure figcaption {
   background: var(--card);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 26px;
+  padding: 30px 26px 26px;
   position: relative;
+  overflow: hidden;
 }
 
 .map-mission-title {
@@ -944,7 +1021,9 @@ footer a { color: #d9d0ff; }
   background: var(--card);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 26px;
+  padding: 30px 26px 26px;
+  position: relative;
+  overflow: hidden;
 }
 
 .exam-type {
