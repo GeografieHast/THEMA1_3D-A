@@ -563,6 +563,17 @@ figure.book-figure {
 
 figure.book-figure img { border-radius: 12px; flex: 1; min-height: 0; width: 100%; object-fit: cover; }
 
+figure.book-figure.is-native-size {
+  display: block;
+}
+
+figure.book-figure.is-native-size img {
+  width: auto;
+  max-width: 100%;
+  flex: none;
+  margin: 0 auto;
+}
+
 figure.book-figure figcaption {
   font-size: 0.85rem;
   color: var(--ink-soft);
