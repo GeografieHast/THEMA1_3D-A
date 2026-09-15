@@ -526,10 +526,12 @@ section.block {
   font-size: 1.15rem;
 }
 
-.theory-card p { margin: 0 0 10px; }
+.theory-card p { margin: 0 0 16px; }
 .theory-card p:last-child { margin-bottom: 0; }
-.theory-card ul { margin: 8px 0 0; padding-left: 20px; }
-.theory-card li { margin-bottom: 6px; }
+.theory-card ul { margin: 12px 0 16px; padding-left: 22px; }
+.theory-card ul:last-child { margin-bottom: 0; }
+.theory-card li { margin-bottom: 10px; }
+.theory-card li:last-child { margin-bottom: 0; }
 
 .stamp {
   display: inline-flex;
@@ -550,14 +552,16 @@ section.block {
 .stamp.c-coral  { background: var(--coral); }
 
 figure.book-figure {
-  margin: 18px 0 0;
+  margin: 20px 0 20px;
   background: var(--card);
   border-radius: var(--radius);
   padding: 14px;
   box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
 }
 
-figure.book-figure img { border-radius: 12px; }
+figure.book-figure img { border-radius: 12px; flex: 1; min-height: 0; width: 100%; object-fit: cover; }
 
 figure.book-figure figcaption {
   font-size: 0.85rem;
@@ -569,7 +573,10 @@ figure.book-figure figcaption {
 .two-col {
   display: grid;
   gap: 18px;
+  align-items: stretch;
 }
+
+.two-col figure.book-figure { height: 100%; }
 
 @media (min-width: 700px) {
   .two-col { grid-template-columns: 1fr 1fr; }

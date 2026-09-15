@@ -124,10 +124,6 @@
           <img src="assets/img/las_vegas.png" alt="Satellietbeeld van de stad Las Vegas (grijs, met rechte straten) in de woestijn (geelbruin), met het waterreservoir Lake Mead rechts in beeld">
           <figcaption>1.3 Satellietbeeld van Las Vegas (Verenigde Staten): de stad (grijs, met rechte straten) in de woestijn (geelbruin), met het waterreservoir Lake Mead rechts in beeld</figcaption>
         </figure>
-        <figure class="book-figure" style="margin-top:14px;">
-          <img src="assets/img/nightlights_iss_window.png" alt="Noord-Amerikaanse steden bij nacht, gezien vanuit het ISS">
-          <figcaption>1.4 Noord-Amerikaanse steden bij nacht, gezien vanuit het ISS</figcaption>
-        </figure>
       </div>
 
       <div class="theory-card">
@@ -163,6 +159,10 @@
       <div class="theory-card">
         <span class="stamp c-leaf"><svg class="icon" aria-hidden="true"><use href="#icon-people"></use></svg> Bevolkingsspreiding</span>
         <h3>De aarde biedt kansen</h3>
+        <figure class="book-figure" style="margin-top:14px;">
+          <img src="assets/img/nightlights_iss_window.png" alt="Noord-Amerikaanse steden bij nacht, gezien vanuit het ISS">
+          <figcaption>1.4 Noord-Amerikaanse steden bij nacht, gezien vanuit het ISS</figcaption>
+        </figure>
         <p>De bevolking is onregelmatig over de aarde verspreid. De <strong>bevolkingsdichtheid</strong> geeft weer hoeveel mensen er gemiddeld per km² wonen. De mens woont waar de aarde kansen biedt om te leven, voedsel te produceren en een inkomen te verwerven. Alle zes fysischgeografische landschapsvormende lagen hierboven spelen daarin een rol:</p>
         <figure class="book-figure" style="margin-top:14px;">
           <img src="assets/img/dun_dichtbevolkt_schaal.png" alt="Schaal van dunbevolkt naar zeer dichtbevolkt: IJsland 2,8, Rusland 9, Frankrijk 114, België 377, Bangladesh 1240 inwoners per km²">
@@ -267,11 +267,7 @@
           <img src="assets/img/bron_b_afrika_regios.png" alt="Kaart van Afrika met vijf genummerde gebieden">
           <figcaption>Vijf gebieden in Afrika: 1 Congobekken, 2 Nijlvallei, 3 Rwanda en Burundi, 4 Sahara, 5 westkust van Afrika</figcaption>
         </figure>
-        <div id="exam-afrika-1" style="margin-top:18px;"></div>
-        <div id="exam-afrika-2" style="margin-top:14px;"></div>
-        <div id="exam-afrika-3" style="margin-top:14px;"></div>
-        <div id="exam-afrika-4" style="margin-top:14px;"></div>
-        <div id="exam-afrika-5" style="margin-top:14px;"></div>
+        <div id="exam-afrika-regios" style="margin-top:18px;"></div>
       </div>
 
       <div class="map-mission">
@@ -538,38 +534,13 @@ buildOpenReveal(document.getElementById("exam-afrika-eilanden"), {
   model: "Bijvoorbeeld: Madagaskar, de Kaapverdische Eilanden, Príncipe, Sao Tomé of de Comoren (elk drie hiervan is een goed antwoord)."
 });
 
-buildMapExercise(document.getElementById("exam-afrika-1"), {
-  caption: "1. Congobekken",
+buildMapExercise(document.getElementById("exam-afrika-regios"), {
   items: [
-    { q: "Is het Congobekken dunbevolkt of dichtbevolkt?", options: ["Dunbevolkt", "Dichtbevolkt"], correct: 0, explain: "Warm en nat klimaat met een moeilijk doordringbare plantengroei." }
-  ]
-});
-
-buildMapExercise(document.getElementById("exam-afrika-2"), {
-  caption: "2. Nijlvallei",
-  items: [
-    { q: "Is de Nijlvallei dunbevolkt of dichtbevolkt?", options: ["Dunbevolkt", "Dichtbevolkt"], correct: 1, explain: "Het reliëf is er gunstig voor landbouw, en de aanwezigheid van de Nijl biedt extra kansen (irrigatie)." }
-  ]
-});
-
-buildMapExercise(document.getElementById("exam-afrika-3"), {
-  caption: "3. Rwanda en Burundi",
-  items: [
-    { q: "Zijn Rwanda en Burundi dunbevolkt of dichtbevolkt?", options: ["Dunbevolkt", "Dichtbevolkt"], correct: 1, explain: "Een gunstig klimaat: op deze hoogte in een warme streek is het aangenaam koel." }
-  ]
-});
-
-buildMapExercise(document.getElementById("exam-afrika-4"), {
-  caption: "4. Sahara",
-  items: [
-    { q: "Is de Sahara dunbevolkt of dichtbevolkt?", options: ["Dunbevolkt", "Dichtbevolkt"], correct: 0, explain: "Een ongunstig klimaat: te droog voor landbouw." }
-  ]
-});
-
-buildMapExercise(document.getElementById("exam-afrika-5"), {
-  caption: "5. Westkust van Afrika",
-  items: [
-    { q: "Is de westkust van Afrika dunbevolkt of dichtbevolkt?", options: ["Dunbevolkt", "Dichtbevolkt"], correct: 1, explain: "Gunstig klimaat, reliëf en bodem, plus de aanwezigheid van grondstoffen." }
+    { q: "Congobekken: dunbevolkt of dichtbevolkt?", options: ["Dunbevolkt", "Dichtbevolkt"], correct: 0, explain: "Warm en nat klimaat met een moeilijk doordringbare plantengroei." },
+    { q: "Nijlvallei: dunbevolkt of dichtbevolkt?", options: ["Dunbevolkt", "Dichtbevolkt"], correct: 1, explain: "Het reliëf is er gunstig voor landbouw, en de aanwezigheid van de Nijl biedt extra kansen (irrigatie)." },
+    { q: "Rwanda en Burundi: dunbevolkt of dichtbevolkt?", options: ["Dunbevolkt", "Dichtbevolkt"], correct: 1, explain: "Een gunstig klimaat: op deze hoogte in een warme streek is het aangenaam koel." },
+    { q: "Sahara: dunbevolkt of dichtbevolkt?", options: ["Dunbevolkt", "Dichtbevolkt"], correct: 0, explain: "Een ongunstig klimaat: te droog voor landbouw." },
+    { q: "Westkust van Afrika: dunbevolkt of dichtbevolkt?", options: ["Dunbevolkt", "Dichtbevolkt"], correct: 1, explain: "Gunstig klimaat, reliëf en bodem, plus de aanwezigheid van grondstoffen." }
   ]
 });
 
